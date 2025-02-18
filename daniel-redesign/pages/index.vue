@@ -2,10 +2,13 @@
     <div class="">
         <PageContent>
             <section class="bg-white mb-24 xl:mb-40">
-                <EbookHeader />
+                <EbookHeader :homepage="true" />
             </section>
             <section class="bg-white mb-24 xl:mb-40">
-                <AboutHeader />
+                <AboutHeader :homepage="true" />
+            </section>
+            <section class="bg-white mb-24 xl:mb-40">
+                <WorkshopsHeader :homepage="true" />
             </section>
             <!-- <div class="relative mx-auto max-w-[92rem] h-[48rem] gap-16 bg-white"> -->
                 <!-- <div class="absolute bottom-0 h-40 w-full rounded-r-full bg-[#094468] transform -translate-y-full -translate-x-1/3"></div> -->
@@ -17,13 +20,20 @@
                 <!-- <img src="http://www.danielstoinskiredesign.pl/wp-content/gallery/lookbook-3/DME8478.jpg" class="w-full h-full object-cover">
             </div> -->
             <section class="bg-white mb-24 xl:mb-40">
-                <BlogHeader />
+                <BlogHeader :homepage="true" />
             </section>
             <section class="bg-white mb-24 xl:mb-40">
-                <StorageHeader />
+                <StorageHeader :homepage="true" />
             </section>
             <section class="bg-white mb-24">
-                <ContactHeader />
+                <!-- <ContactHeader /> -->
+                <ContactForm />
+                <!-- <div>
+                    <h3 class="text-5xl text-[#731919] font-semibold">Pracownia</h3>
+                    <p class="mt-6">Lokalizacja: ul. Królewska 14, Kraków</p>
+                    <p class="mb-6">Zapraszam do odwiedzenia mnie w mojej pracowni.</p>
+                    <img src="https://zwyklezycie.pl/wp-content/uploads/2018/01/bez-nazwy.001-1024x768.jpeg" alt="Daniel Stoiński Redesign pracownia" class="w-full" />
+                </div> -->
             </section>
         </PageContent>
     </div>

@@ -8,7 +8,9 @@
                             <p>sklep</p>
                         </li>
                         <li>
-                            <p>warsztaty</p>
+                            <NuxtLink to="/warsztaty" class="pb-1">
+                                warsztaty
+                            </NuxtLink>
                         </li>
                         <li>
                             <NuxtLink to="/magazyn" class="pb-1">
@@ -26,7 +28,9 @@
                     <!-- Navigation links for larger screens -->
                     <ul class="navbar-links hidden lg:flex col-span-2 justify-center gap-9 xl:gap-12">
                         <li>
-                            <p>zdjęcia</p>
+                            <NuxtLink to="/wpisy" class="pb-1">
+                                wpisy
+                            </NuxtLink>
                         </li>
                         <li>
                             <NuxtLink to="/o-mnie" class="pb-1">
@@ -34,7 +38,9 @@
                             </NuxtLink>
                         </li>
                         <li>
-                            <p>kontakt</p>
+                            <NuxtLink to="/kontakt" class="pb-1">
+                                kontakt
+                            </NuxtLink>
                         </li>
                     </ul>
                 </div>

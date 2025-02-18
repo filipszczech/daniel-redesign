@@ -1,7 +1,9 @@
 <template>
-    <div class="xl:w-3/4 mx-auto">
+    <div class="mx-auto xl:w-3/4">
         <h1 class="text-5xl text-[#731919] font-semibold mb-6 text-end">E-book</h1>
-        <img src="/img/ebook.jpg" class="w-full border border-black" />
+        <div class="w-full flex gap-0 border border-black">
+            <img src="/img/ebook.png" class="w-full" />
+        </div>
         <p class="mt-6 xl:w-3/4">
             Napisałem ebooka, w którym krok po kroku opisałem proces renowacji kultowego krzesła Hałas. W e-booku znajdziesz informacje na temat tego, jak przygotować krzesło do renowacji, jakie narzędzia będą Ci potrzebne oraz jakie kroki należy wykonać, aby odnowić krzesło Hałas.
         </p>

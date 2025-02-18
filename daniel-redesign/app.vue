@@ -52,6 +52,7 @@
   } */
    body {
     font-family: Aleo;
+    /* background-color: #EDEDE2; */
    }
 
 </style>
