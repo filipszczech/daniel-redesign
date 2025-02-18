@@ -37,21 +37,26 @@
 </script>
 
 <style>
-  .page-enter-active,
+  .page-enter-active {
+    transition: all 0.5s;
+  }
   .page-leave-active {
     transition: all 0.5s;
   }
-  .page-enter-from,
+  .page-enter-from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
   .page-leave-to {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateY(50px);
   }
   /* body {
     background: url('/img/tkanina2.jpg') repeat;
     background-size: 16rem;
   } */
    body {
-    font-family: Aleo;
+    font-family: "Aleo";
     /* background-color: #EDEDE2; */
    }
 

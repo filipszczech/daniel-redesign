@@ -4,7 +4,7 @@
             <div class="py-9 border-t border-[#003450] bg-white">
                 <div class="flex justify-center mb-6">
                     <NuxtLink to="/" class="mx-auto w-fit">
-                        <img src="http://www.danielstoinskiredesign.pl/wp-content/uploads/2017/01/Daniel_Stoinski_Redesign-gotowe-01.png" alt="Daniel Stoiński Redesign logo" class="h-16" />
+                        <img src="/img/logo.png" alt="Daniel Stoiński Redesign logo" class="h-20" />
                     </NuxtLink>
                 </div>
                 <ul class="navbar-links hidden lg:flex justify-center col-span-2 gap-9 mb-9">

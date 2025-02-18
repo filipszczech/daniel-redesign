@@ -19,7 +19,7 @@
                         </li>
                     </ul>
                     <NuxtLink to="/" class="col-span-3 lg:col-span-2 flex justify-start lg:justify-center">
-                        <img src="http://www.danielstoinskiredesign.pl/wp-content/uploads/2017/01/Daniel_Stoinski_Redesign-gotowe-01.png" alt="Daniel Stoiński Redesign logo" class="h-16 lg:h-20" />
+                        <img src="/img/logo.png" alt="Daniel Stoiński Redesign logo" class="h-16 lg:h-20" />
                     </NuxtLink>
                     <!-- Hamburger menu icon for small screens -->
                     <div class="col-span-3 flex justify-end lg:hidden hover-scale-105 cursor-pointer" @click="toggleMenu">
@@ -29,7 +29,7 @@
                     <ul class="navbar-links hidden lg:flex col-span-2 justify-center gap-9 xl:gap-12">
                         <li>
                             <NuxtLink to="/wpisy" class="pb-1">
-                                wpisy
+                                blog
                             </NuxtLink>
                         </li>
                         <li>
@@ -63,6 +63,9 @@
     const toggleMenu = () => {
         isMenuOpen.value = !isMenuOpen.value;
     }
+
+    import { useRoute } from 'vue-router';
+    const route = useRoute();
 </script>
 
 <style scoped>

@@ -5,19 +5,19 @@
         <div class="col-span-2 flex justify-evenly flex-nowrap gap-6">
             <div class="relative">
                 <p class="absolute top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2 text-3xl text-white">krzesło</p>
-                <NuxtImg src="/img/warsztaty.png" alt="Daniel Stoiński - warsztaty" class="w-full h-[20rem] object-cover border border-black" />
+                <NuxtImg src="/img/warsztaty.png" alt="Daniel Stoiński - warsztaty" class="w-full h-[24rem] object-cover border border-black" />
             </div>
             <div class="relative">
                 <p class="absolute top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2 text-3xl text-white">fotel</p>
-                <NuxtImg src="/img/warsztaty2.jpg" alt="Daniel Stoiński - warsztaty" class="w-full h-[20rem] object-cover border border-black" />
+                <NuxtImg src="/img/warsztaty2.jpg" alt="Daniel Stoiński - warsztaty" class="w-full h-[24rem] object-cover border border-black" />
             </div>
             <div class="relative">
                 <p class="absolute top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2 text-3xl text-white">stolik / szafka</p>
-                <NuxtImg src="/img/warsztaty3.jpg" alt="Daniel Stoiński - warsztaty" class="w-full h-[20rem] object-cover border border-black" />
+                <NuxtImg src="/img/warsztaty3.jpg" alt="Daniel Stoiński - warsztaty" class="w-full h-[24rem] object-cover border border-black" />
             </div>
             <div class="relative">
                 <p class="absolute top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2 text-3xl text-white">rattan</p>
-                <NuxtImg src="/img/warsztaty4.jpg" alt="Daniel Stoiński - warsztaty" class="w-full h-[20rem] object-cover border border-black" />
+                <NuxtImg src="/img/warsztaty4.jpg" alt="Daniel Stoiński - warsztaty" class="w-full h-[24rem] object-cover border border-black" />
             </div>
             <!-- <div class="relative">
                 <p class="absolute top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2 text-3xl text-white">politurowanie</p>
