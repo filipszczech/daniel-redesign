@@ -52,11 +52,11 @@
     transform: translateY(50px);
   }
   /* body {
-    background: url('/img/tkanina2.jpg') repeat;
+    background: url('/img/tkanina.jpg') repeat;
     background-size: 16rem;
   } */
    body {
-    font-family: "Aleo";
+    font-family: "PT Sans", serif;
     /* background-color: #EDEDE2; */
    }
 

@@ -34,7 +34,7 @@
                         </li>
                         <li>
                             <NuxtLink to="/o-mnie" class="pb-1">
-                                o mnie
+                                bio
                             </NuxtLink>
                         </li>
                         <li>

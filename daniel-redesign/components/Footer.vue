@@ -9,24 +9,34 @@
                 </div>
                 <ul class="navbar-links hidden lg:flex justify-center col-span-2 gap-9 mb-9">
                     <li>
-                        <p>sklep</p>
-                    </li>
-                    <li>
-                        <p>warsztaty</p>
-                    </li>
-                    <li>
                         <NuxtLink to="/magazyn" class="pb-1">
-                            magazyn
+                            sklep
                         </NuxtLink>
                     </li>
                     <li>
-                        <p>zdjęcia</p>
+                        <NuxtLink to="/warsztaty" class="pb-1">
+                            warsztaty
+                        </NuxtLink>
                     </li>
                     <li>
-                        <p>o mnie</p>
+                        <NuxtLink to="/magazyn" class="pb-1">
+                            storage
+                        </NuxtLink>
                     </li>
                     <li>
-                        <p>kontakt</p>
+                        <NuxtLink to="/blog" class="pb-1">
+                            blog
+                        </NuxtLink>
+                    </li>
+                    <li>
+                        <NuxtLink to="/o-mnie" class="pb-1">
+                            bio
+                        </NuxtLink>
+                    </li>
+                    <li>
+                        <NuxtLink to="/kontakt" class="pb-1">
+                            kontakt
+                        </NuxtLink>
                     </li>
                 </ul>
                 <div class="flex justify-center gap-5 text-[#003450]">

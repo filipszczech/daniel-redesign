@@ -18,10 +18,10 @@
                 </div>
             </section>
         <PageContent>
-            <section class="bg-white mb-24 xl:my-40">
+            <!-- <section class="bg-white mb-24 xl:my-40">
                 <EbookHeader :homepage="true" />
-            </section>
-            <section class="bg-white mb-24 xl:mb-40">
+            </section> -->
+            <section class="bg-white mb-24 xl:my-40">
                 <WorkshopsHeader :homepage="true" />
             </section>
             <!-- <div class="relative mx-auto max-w-[92rem] h-[48rem] gap-16 bg-white"> -->
@@ -44,7 +44,7 @@
             </section>
             <section class="bg-white mb-24">
                 <!-- <ContactHeader /> -->
-                <ContactForm />
+                <ContactHeader />
                 <!-- <div>
                     <h3 class="text-5xl text-[#731919] font-semibold">Pracownia</h3>
                     <p class="mt-6">Lokalizacja: ul. Królewska 14, Kraków</p>
