@@ -2,7 +2,8 @@
     <div>
         <header>
             <nav class="w-full z-50 bg-white">
-                <div class="w-full grid grid-cols-6 items-center py-4 px-6 lg:px-12 lg:text-lg">
+                <div class="fixed top-0 z-50 bg-white w-full grid grid-cols-6 items-center py-4 px-6 lg:px-12 lg:text-lg transition-transform duration-300"
+                    :class="{ '-translate-y-full': !isVisible }">
                     <ul class="navbar-links hidden lg:flex justify-center col-span-2 gap-9 xl:gap-12">
                         <li>
                             <p>sklep</p>
@@ -14,7 +15,7 @@
                         </li>
                         <li>
                             <NuxtLink to="/magazyn" class="pb-1">
-                                magazyn
+                                storage
                             </NuxtLink>
                         </li>
                     </ul>
@@ -66,6 +67,23 @@
 
     import { useRoute } from 'vue-router';
     const route = useRoute();
+
+    const lastScrollY = ref(0);
+    const isVisible = ref(true);
+
+    const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+    isVisible.value = currentScrollY < lastScrollY.value || currentScrollY < 10;
+    lastScrollY.value = currentScrollY;
+    };
+
+    onMounted(() => {
+    window.addEventListener("scroll", handleScroll);
+    });
+
+    onUnmounted(() => {
+    window.removeEventListener("scroll", handleScroll);
+    });
 </script>
 
 <style scoped>

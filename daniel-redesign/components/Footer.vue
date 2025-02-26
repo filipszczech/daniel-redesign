@@ -24,7 +24,7 @@
                         </NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="/blog" class="pb-1">
+                        <NuxtLink to="/wpisy" class="pb-1">
                             blog
                         </NuxtLink>
                     </li>

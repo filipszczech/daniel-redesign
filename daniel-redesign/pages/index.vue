@@ -21,7 +21,7 @@
             <!-- <section class="bg-white mb-24 xl:my-40">
                 <EbookHeader :homepage="true" />
             </section> -->
-            <section class="bg-white mb-24 xl:my-40">
+            <section class="bg-white mb-24 xl:mb-40">
                 <WorkshopsHeader :homepage="true" />
             </section>
             <!-- <div class="relative mx-auto max-w-[92rem] h-[48rem] gap-16 bg-white"> -->

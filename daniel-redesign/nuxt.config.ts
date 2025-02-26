@@ -5,11 +5,11 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
-      title: 'title',
+      title: 'Daniel Stoiński Redesign',
       meta: [
         { name: "description", content: 'desc' },
         { property: 'og:url', content: 'url' },
-        { property: 'og:title', content: 'title' },
+        { property: 'og:title', content: 'Daniel Stoiński Redesign' },
         { property: 'og:description', content: 'og desc' },
         { property: 'og:image', content: '' },
         { property: 'og:type', content: 'website' },
