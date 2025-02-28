@@ -19,9 +19,11 @@
                             </NuxtLink>
                         </li>
                     </ul>
-                    <NuxtLink to="/" class="col-span-3 lg:col-span-2 flex justify-start lg:justify-center">
-                        <img src="/img/logo.png" alt="Daniel Stoiński Redesign logo" class="h-16 lg:h-20" />
-                    </NuxtLink>
+                    <div class="col-span-3 lg:col-span-2 flex justify-start lg:justify-center">
+                        <NuxtLink to="/">
+                            <img src="/img/logo.png" alt="Daniel Stoiński Redesign logo" class="h-16 lg:h-20" />
+                        </NuxtLink>
+                    </div>
                     <!-- Hamburger menu icon for small screens -->
                     <div class="col-span-3 flex justify-end lg:hidden hover-scale-105 cursor-pointer" @click="toggleMenu">
                         <Icon name="mdi:hamburger-menu" style="color: black" size="2rem" />

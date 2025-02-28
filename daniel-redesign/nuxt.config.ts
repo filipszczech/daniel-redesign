@@ -34,7 +34,7 @@ export default defineNuxtConfig({
         pass: process.env.EMAIL_PASS,
       },
     },
-  }], '@pinia/nuxt', '@nuxt/icon', '@nuxt/fonts', '@vueuse/motion/nuxt'],
+  }], '@pinia/nuxt', '@nuxt/icon', '@nuxt/fonts', '@vueuse/motion/nuxt', '@nuxt/content'],
   mail: {
     message: {
       to: process.env.EMAIL_USER,
@@ -49,5 +49,8 @@ export default defineNuxtConfig({
   },
   supabase: {
     redirect: false
+  },
+  content: {
+    documentDriven: true
   },
 })

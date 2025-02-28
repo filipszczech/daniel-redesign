@@ -48,12 +48,12 @@
 
 <script setup>
     const allFurniture = ref([
-    { id: 1, name: "Krzesła typ 200-190, Rajmund Hałas", image: "https://a.allegroimg.com/s1024/0c9665/e4470c654a9b93b9e129b117842b", sold: false },
-    { id: 2, name: "Fotel PRL, lata 60.", image: "https://a.allegroimg.com/s1024/0c9665/e4470c654a9b93b9e129b117842b", sold: false },
-    { id: 3, name: "Stół dębowy, ręcznie robiony", image: "https://a.allegroimg.com/s1024/0c9665/e4470c654a9b93b9e129b117842b", sold: false },
-    { id: 4, name: "Komoda fornirowana, lata 70.", image: "https://a.allegroimg.com/s1024/0c9665/e4470c654a9b93b9e129b117842b", sold: false },
-    { id: 5, name: "Szafa drewniana, styl vintage", image: "https://a.allegroimg.com/s1024/0c9665/e4470c654a9b93b9e129b117842b", sold: true },
-    { id: 6, name: "Krzesło gięte, styl Thonet", image: "https://a.allegroimg.com/s1024/0c9665/e4470c654a9b93b9e129b117842b", sold: true }
+    { id: 1, name: "Krzesła typ 200-190, Rajmund Hałas", image: "/img/magazyn1.jpg", sold: false },
+    { id: 2, name: "Fotel PRL, lata 60.", image: "/img/magazyn1.jpg", sold: false },
+    { id: 3, name: "Stół dębowy, ręcznie robiony", image: "/img/magazyn1.jpg", sold: false },
+    { id: 4, name: "Komoda fornirowana, lata 70.", image: "/img/magazyn1.jpg", sold: false },
+    { id: 5, name: "Szafa drewniana, styl vintage", image: "/img/magazyn1.jpg", sold: true },
+    { id: 6, name: "Krzesło gięte, styl Thonet", image: "/img/magazyn1.jpg", sold: true }
     ]);
 
     const allStorage = ref([

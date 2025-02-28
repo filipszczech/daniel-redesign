@@ -3,7 +3,7 @@
         <section>
             <div class=" relative text-white mt-24"
                 v-motion
-                :initial="{ opacity: 0, y: 20 }"
+                :initial="{ opacity: 0, y: 10 }"
                 :visibleOnce="{ opacity: 1, y: 0 }"
                 :duration="600"
                 >
