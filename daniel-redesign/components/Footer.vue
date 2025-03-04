@@ -7,7 +7,7 @@
                         <img src="/img/logo.png" alt="Daniel Stoiński Redesign logo" class="h-20" />
                     </NuxtLink>
                 </div>
-                <ul class="navbar-links hidden lg:flex justify-center col-span-2 gap-9 mb-9">
+                <ul class="navbar-links flex flex-wrap justify-center gap-5 md:gap-9 mb-9 mx-auto">
                     <li>
                         <NuxtLink to="/magazyn" class="pb-1">
                             sklep
@@ -39,14 +39,14 @@
                         </NuxtLink>
                     </li>
                 </ul>
-                <div class="flex justify-center gap-5 text-[#003450]">
-                    <a href="https://www.instagram.com/lichtanskimichal/" target="_blank" rel="noopener" aria-label="Michał Lichtański Instagram Profile" class="flex items-center hover:scale-105 transition-all duration-300">
+                <div class="flex justify-center gap-5 text-black">
+                    <a href="https://www.instagram.com/danielstoinskiredesign/" target="_blank" rel="noopener" aria-label="Daniel Stoiński Instagram Profile" class="flex items-center hover:scale-105 transition-all duration-300">
                         <Icon size="1.5rem" name="simple-icons:instagram" />
                     </a>
-                    <a href="https://www.facebook.com/lichtanski.michal/" target="_blank" rel="noopener" aria-label="Michał Lichtański Facebook Profile" class="flex items-center hover:scale-105 transition-all duration-300">
+                    <a href="https://www.facebook.com/DanielStoinskiRedesign/" target="_blank" rel="noopener" aria-label="Daniel Stoiński Facebook Profile" class="flex items-center hover:scale-105 transition-all duration-300">
                         <Icon size="1.5rem" name="simple-icons:facebook" />
                     </a>
-                    <a href="https://www.facebook.com/lichtanski.michal/" target="_blank" rel="noopener" aria-label="Michał Lichtański Facebook Profile" class="flex items-center hover:scale-105 transition-all duration-300">
+                    <a href="https://www.tiktok.com/@danielstoinskiredesign" target="_blank" rel="noopener" aria-label="Daniel Stoiński TikTok Profile" class="flex items-center hover:scale-105 transition-all duration-300">
                         <Icon size="1.5rem" name="simple-icons:tiktok" />
                     </a>
                 </div>

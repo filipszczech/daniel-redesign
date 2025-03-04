@@ -1,10 +1,10 @@
 <template>
     <div>
         <PageContent>
-            <section class="mb-32 xl:mb-40">
+            <section class="">
                 <div>
                     <h1 class="text-6xl text-[#731919] mb-6 font-semibold">Blog</h1>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-6 xl:gap-12">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-12">
                         <div v-for="post in displayedPosts" :key="post.title" class="xl:mb-12">
                             <BlogCard :post="post" />
                         </div>
@@ -29,36 +29,40 @@
         {
             title: 'Renowacja stołu',
             slug: 'renowacja-stolu',
-            img: 'http://www.danielstoinskiredesign.pl/wp-content/gallery/2/5.jpg',
-            desc: 'Krótkie streszczenie wpisu. Ciąg dalszy w środku...'
+            img: '/img/blog1.jpg',
+            desc: 'Krótkie streszczenie wpisu. Ciąg dalszy w środku...',
+            tags: ['renowacja', 'stół']
         },
         {
             title: 'Występ w Łowcach',
             slug: 'wystep-w-lowcach',
-            img: 'http://www.danielstoinskiredesign.pl/wp-content/gallery/lookbook-3/DME8550.jpg',
-            desc: 'Krótkie streszczenie wpisu. Ciąg dalszy w środku...'
+            img: '/img/blog2.jpg',
+            desc: 'Krótkie streszczenie wpisu. Ciąg dalszy w środku...',
+            tags: ['renowacja', 'łowcy']
         },
         {
             title: 'Sesja z pieskami',
             slug: 'sesja-z-pieskami',
-            img: 'http://www.danielstoinskiredesign.pl/wp-content/gallery/2/19.jpg',
-            desc: 'Krótkie streszczenie wpisu. Ciąg dalszy w środku...'
+            img: '/img/blog3.jpg',
+            desc: 'Krótkie streszczenie wpisu. Ciąg dalszy w środku...',
+            tags: ['lifestyle', 'pieski']
         },
         {
             title: 'Sesja z kotkami',
             slug: 'sesja-z-kotkami',
             img: '/img/kontakt.jpg',
-            desc: 'Krótkie streszczenie wpisu. Ciąg dalszy w środku...'
+            desc: 'Krótkie streszczenie wpisu. Ciąg dalszy w środku...',
+            tags: ['lifestyle', 'kotki']
         }
     ]);
     
 
     const displayedPosts = ref([]);
-    const postsToShow = ref(3);
+    const postsToShow = ref(4);
     displayedPosts.value = posts.value.slice(0, postsToShow.value);
 
     const loadMorePosts = () => {
-        postsToShow.value += 3;
+        postsToShow.value += 4;
         displayedPosts.value = posts.value.slice(0, postsToShow.value);
     };
 </script>

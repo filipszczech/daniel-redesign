@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class='grid grid-cols-2 gap-6 lg:gap-9'>
-            <div class='col-span-1 relative z-10 flex flex-col justify-center'>
+            <div class='col-span-2 lg:col-span-1 relative z-10 flex flex-col justify-center'>
                 <h3 class="text-5xl text-[#731919] font-semibold mb-6">Kontakt</h3>
                 <p class="mb-6">Napisz do mnie!<br>Chętnie odpowiem na wszelkie pytania dotyczące renowacji mebli, warsztatów stolarskich oraz współpracy.</p>
                 <form
@@ -26,7 +26,7 @@
                     <button type="submit" class="col-span-2 md:col-span-1 text-[#003450] border-b border-[#003450] py-1 px-2 w-fit">Wyślij</button>
                 </form>
             </div>
-            <div class="flex justify-end">
+            <div class="hidden lg:flex justify-end">
                 <img src="/img/kontakt.jpg" class="w-3/4 object-cover bg-white border border-black" />
             </div>
         </div>

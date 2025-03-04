@@ -1,7 +1,8 @@
 <template>
     <div class="grid grid-cols-2 gap-6 lg:gap-12 border-[#003450]">
-        <div class="flex flex-col justify-center gap-6">
-            <h1 class="text-5xl text-[#731919] font-semibold">Daniel Stoiński</h1>
+        <div class="col-span-2 md:col-span-1 flex flex-col justify-center gap-6">
+            <h1 class="text-4xl md:text-5xl text-[#731919] font-semibold">Daniel Stoiński</h1>
+            <img src="https://www.asp.krakow.pl/wp-content/uploads/2024/06/3.-Daniel-Stoinski.jpg" class="md:hidden col-span-2 w-full h-[28rem] object-cover bg-white border border-black" />
             <p>
                 Jestem kulturoznawcą i czeladnikiem tradycyjnego rzemiosła, specjalizującym się w meblarstwie oraz renowacji. Od 10 lat zajmuję się kompleksową renowacją mebli, prowadząc stolarsko-tapicerskie warsztaty i szkolenia. Mam doświadczenie w pracy na Wydziale Sztuki Uniwersytetu KEN w Krakowie, gdzie uczę przyszłych mistrzów rzemiosła.    
             </p>
@@ -18,7 +19,7 @@
                 </ul>
             </div>
         </div>
-        <img src="https://www.asp.krakow.pl/wp-content/uploads/2024/06/3.-Daniel-Stoinski.jpg" class="w-full h-[40rem] object-cover bg-white border border-black" />
+        <img src="https://www.asp.krakow.pl/wp-content/uploads/2024/06/3.-Daniel-Stoinski.jpg" class="hidden md:block col-span-1 w-full h-[40rem] object-cover bg-white border border-black" />
     </div>
 </template>
 

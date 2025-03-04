@@ -4,7 +4,7 @@
             <section class="mb-32 xl:mb-40">
                 <StorageHeader />
             </section>
-            <section class="grid grid-cols-12 gap-8 mb-32 xl:mb-40">
+            <section class="grid grid-cols-12 gap-8 mb-24">
                 <h2 class="col-span-12 text-3xl">Meble po renowacji:</h2>
                 <div
                     v-for="item in displayedFurniture"
@@ -22,7 +22,7 @@
                 <button
                 v-if="furnitureToShow < allFurniture.length"
                 @click="loadMoreFurniture"
-                class="col-span-12 mx-auto p-1 border-b border-black mt-6"
+                class="col-span-12 mx-auto p-1 border-b border-black md:mt-6"
                 >
                     Załaduj więcej
                 </button>
@@ -37,7 +37,7 @@
                 <button
                     v-if="storageToShow < allStorage.length"
                     @click="loadMoreStorage"
-                    class="col-span-12 mx-auto p-1 border-b border-black my-6"
+                    class="col-span-12 mx-auto p-1 border-b border-black md:my-6"
                     >
                     Załaduj więcej
                 </button>
