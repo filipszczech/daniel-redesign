@@ -4,16 +4,16 @@
             <section class="mb-32">
                 <AboutHeader />
             </section>
-            <section class="mb-32">
-                <h2 class="text-5xl text-[#731919] font-semibold mb-9">
+            <section class="mb-12 xl:mb-24">
+                <h2 class="text-5xl text-[#731919] font-semibold mb-6">
                     Artykuły
                 </h2>
                 <p class="mb-9 xl:w-2/3">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed etiam, quamquam in hac divisione rem ipsam prorsus probo. Quae cum dixisset paulumque institisset, Quid est? Duo Reges: constructio interrete
                 </p>
-                <div class="flex flex-col gap-24">
+                <div class="flex flex-col gap-16 md:gap-24">
                     <div v-for="article in articles" :key="article.title">
-                        <ArticleCard :article="article" />
+                            <AboutArticle :article="article" />
                     </div>
                 </div>
             </section>
