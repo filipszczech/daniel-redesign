@@ -8,7 +8,7 @@
                 <p class="xl:w-3/4 mb-4">{{ article.desc }}</p>
                 <p v-if="article.link">Źródło: {{ article.link }}</p>
             </div>
-            <a v-if="article.link" :href="article.link" class="font-semibold py-1 w-fit border-b border-[#731919] text-[#731919] mt-4">
+            <a v-if="article.link" :href="article.link" class="font-semibold pb-1 w-fit border-b border-[#731919] text-[#731919] mt-4">
                 przeczytaj
             </a>
         </div>
