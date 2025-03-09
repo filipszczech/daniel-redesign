@@ -4,35 +4,20 @@
             <section class="mb-16">
                 <div class="grid grid-cols-12 mb-24 md:mb-40 border border-black">
                     <img src="/img/warsztaty2.jpg" class="w-full col-span-12 lg:col-span-8" />
-                    <div class="col-span-12 lg:col-span-4 flex flex-col justify-center gap-6 lg:gap-12 p-6 xl:p-12">
+                    <div class="col-span-12 lg:col-span-4 flex flex-col justify-center gap-6 lg:gap-9 p-6 xl:p-12">
                         <h1 class="text-4xl font-semibo">Terminy warsztatów:</h1>
-                        <ul class="list-inside text-xl">
-                            <li class="mb-4">
-                                <p class="uppercase">Odnawianie krzesła:</p>
-                                <span class="mt-2">> 15 marca 2025</span>
-                            </li>
-                            <li class="mb-4">
-                                <p class="uppercase">Wyplatanie ratannu:</p>
-                                <span class="mt-2">> 15 marca 2025</span>
-                            </li>
-                            <li class="mb-4">
-                                <p class="uppercase">Lakierowanie stołu:</p>
-                                <span class="mt-2">> 19 marca 2025</span>
-                            </li>
-                            <li class="">
-                                <p class="uppercase">Malowanie ściany:</p>
-                                <span class="mt-2">> 20 marca 2025</span>
+                        <ul v-if="workshop_dates.length > 0" class="list-inside text-xl">
+                            <li v-for="ws_date in workshop_dates" :key="ws_date.id" class="mb-4">
+                                <p class="uppercase">{{ ws_date.name }}:</p>
+                                <span class="mt-2">> <a :href="ws_date.link" class="border-b border-black">{{ ws_date.date }}</a></span>
                             </li>
                         </ul>
+                        <div v-else class="text-xl">
+                            <p class="mb-2">Brak zaplanowanych warsztatów w najbliższym czasie.</p>
+                            <p>Sprawdź mojego <a class="border-b border-black">Facebooka</a>, aby być na bieżąco.</p>
+                        </div>
                     </div>
                 </div>
-                <!-- <h1 class="text-5xl text-[#731919] font-semibold">Terminy warsztatów:</h1>
-                <ul class="list-disc list-inside mt-3 text-2xl mb-24">
-                    <li class="mb-2">10 marca 2025 - wyplatanie ratannu</li>
-                    <li class="mb-2">15 marca 2025 - odnawianie krzesła</li>
-                    <li class="mb-2">20 marca 2025 - malowanie ściany</li>
-                    <li class="mb-2">25 marca 2025 - lakierowanie stołu</li>
-                </ul> -->
                 <div v-for="(workshop, index) in workshops" :key="workshop.id" class="grid grid-cols-2 gap-6 lg:gap-16 mb-24 xl:mb-24">
                     <div class="col-span-2 lg:col-span-1 flex flex-col justify-center gap-6"
                         :class="index % 2 === 0 && 'lg:order-2'">
@@ -40,7 +25,7 @@
                         <p class="xl:w-4/5">{{ workshop.desc }}</p>
                         <div>
                             <ul class="list-disc list-inside mt-3">
-                                <li v-for="detail in workshop.details" :key="detail" class="mb-2">{{ detail }}</li>
+                                <li v-for="point in workshop.points" :key="point" class="mb-2">{{ point }}</li>
                             </ul>
                         </div>
                     </div>
@@ -52,31 +37,13 @@
 </template>
 
 <script setup>
-    const workshops = ref([
-        { 
-            id: 1, 
-            name: "Krzesło", 
-            img: "/img/warsztaty.png", 
-            desc: "Warsztaty polegają na odnowieniu kultowego krzesła Hałas. W trakcie warsztatów uczestnicy dowiedzą się, jak przygotować krzesło do renowacji, jakie narzędzia będą potrzebne oraz jakie kroki należy wykonać, aby odnowić krzesło Hałas." ,
-            details: [
-                "Warsztaty prowadzone są w małych grupach",
-                "Indywidualne podejście do każdego uczestnika",
-                "Wszystkie narzędzia i materiały są zapewnione",
-                "Warsztaty trwają 8 godzin"
-            ]
-        },
-        { 
-            id: 2, 
-            name: "Rattan", 
-            img: "/img/warsztaty2.jpg", 
-            desc: "Warsztaty polegają na odnowieniu kultowego krzesła Hałas. W trakcie warsztatów uczestnicy dowiedzą się, jak przygotować krzesło do renowacji, jakie narzędzia będą potrzebne oraz jakie kroki należy wykonać, aby odnowić krzesło Hałas." ,
-            details: [
-                "Warsztaty prowadzone są w małych grupach",
-                "Indywidualne podejście do każdego uczestnika",
-                "Wszystkie narzędzia i materiały są zapewnione",
-                "Warsztaty trwają 8 godzin"
-            ]
-        },
-    ]);
+    const workshopsStore = useWorkshopsStore();
+    const workshops = ref([]);
+    const workshop_dates = ref([]);
 
+    await workshopsStore.fetchWorkshops();
+    workshops.value = workshopsStore.workshops;
+
+    await workshopsStore.fetchWorkshopDates();
+    workshop_dates.value = workshopsStore.dates;
 </script>

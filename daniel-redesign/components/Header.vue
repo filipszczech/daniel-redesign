@@ -91,7 +91,7 @@
                             </NuxtLink>
                         </li>
                         <li class="uppercase" v-motion :initial="{ opacity: 0, scale: 0.7, x: -100,}" :enter="{opacity: 1, scale: 1, x: 0,}" :duration="500" :delay="300">
-                            <NuxtLink to="/storage"  @click="toggleMenu">
+                            <NuxtLink to="/magazyn"  @click="toggleMenu">
                                 <p>storage</p>
                             </NuxtLink>
                         </li>

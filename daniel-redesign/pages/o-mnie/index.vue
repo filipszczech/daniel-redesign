@@ -5,7 +5,7 @@
                 <AboutHeader />
             </section>
             <section class="mb-12 xl:mb-24">
-                <h2 class="text-5xl text-[#731919] font-semibold mb-6">
+                <h2 class="text-4xl md:text-5xl text-[#731919] font-semibold mb-6">
                     Artykuły
                 </h2>
                 <p class="mb-9 xl:w-2/3">
@@ -22,27 +22,11 @@
 </template>
 
 <script setup>
-
-    const articles = ref([
-        {
-            title: 'Daniel Stoiński - Hygge Blog',
-            img: 'https://hygge-blog.com/wp-content/uploads/2018/01/mili_2017_11_26-100-1.jpg',
-            desc: 'Dziś rozmawiamy z Danielem Stoińskim – twórcą sklepu z powojennym dizajnem Pikasy Sklep oraz Daniel Stoiński Redesign. Daniel mieszka w Krakowie i tu też ma swoją pracownię, w której odrestaurowuje meble.',
-            link: 'https://hyggel-blog.com/daniel-stoinski/'
-        },
-        {
-            title: 'Z wizytą - Daniel Stoiński',
-            img: 'https://patyna-storage.fra1.digitaloceanspaces.com/5eae24a9ef2645af168ecf1f514d26ff.jpg',
-            desc: 'Krótkie streszczenie wpisu. Ciąg dalszy w środku...',
-            link: 'https://patyna.pl/blog/z-wizyta-daniel-stoinski/'
-        },
-        {
-            title: 'Moda na dizajn z PRL',
-            img: 'https://www.asp.krakow.pl/wp-content/uploads/2024/03/Dizajn_na_fali_1108x528-1080x528.jpg',
-            desc: 'Dziś rozmawiamy z Danielem Stoińskim – twórcą sklepu z powojennym dizajnem Pikasy Sklep oraz Daniel Stoiński Redesign. Daniel mieszka w Krakowie i tu też ma swoją pracownię, w której odrestaurowuje meble.',
-            link: 'https://hyggel-blog.com/daniel-stoinski/'
-        }
-    ]);
+    const articles = ref([]);
+    
+    const contentStore = useContentStore();
+    await contentStore.fetchArticles();
+    articles.value = contentStore.articles;
 </script>
 
 <style lang="scss" scoped>
