@@ -4,7 +4,7 @@
             <div>
                 <h1 class="text-4xl md:text-5xl text-[#731919] font-semibold mb-6">Warsztaty</h1>
                 <NuxtImg src="/img/storage.jpg" alt="Daniel Stoiński - magazyn" class="md:hidden w-full h-80 mb-6 object-cover border border-black" />
-                <p class="text-lg mb-6 xl:w-4/5">Prowadzę warsztaty w małych grupach, co pozwala na indywidualne podejście do każdego uczestnika. Wszystkie narzędzia i materiały są zapewnione. Warsztaty trwają 8 godzin.</p>
+                <p class="text-lg mb-6 xl:pr-16">Zapraszam na kameralne warsztaty z podstaw renowacji mebli i tapicerowania. Małe grupy sprzyjają maksymalnemu skupieniu i uwadze na obiekcie oraz przekazywanej wiedzy. Porozmawiamy o narzędziach, materiałach i technologii wykonania mebli zgodnie ze sztuką tradycyjnego rzemiosła. Wsród oferty warsztatowej każdy znajdzie coś dla siebie, warsztaty podzielone są na sekcje: krzesło, fotel, stolik/szafka, wyplot rattanem czy warsztaty poświęcone kolekcjonowaniu mebli.</p>
                 <h1 class="text-lg font-semibold">Nadchodzące terminy:</h1>
                 <ul v-if="workshop_dates.length > 0" class="list-disc list-inside mt-3 text-lg">
                     <li v-for="ws_date in workshop_dates" :key="ws_date.id" class="mb-2 lowercase">
