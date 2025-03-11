@@ -2,7 +2,7 @@
     <div>
         <div class='grid grid-cols-2 gap-6 lg:gap-9'>
             <div class='col-span-2 lg:col-span-1 relative z-10 flex flex-col justify-center'>
-                <h3 class="text-5xl text-[#731919] font-semibold mb-6">Kontakt</h3>
+                <h3 class="text-4xl md:text-5xl text-[#731919] font-semibold mb-6">Kontakt</h3>
                 <p class="mb-6">Napisz do mnie!<br>Chętnie odpowiem na wszelkie pytania dotyczące renowacji mebli, warsztatów stolarskich oraz współpracy.</p>
                 <form
                     @submit="onSubmit" 

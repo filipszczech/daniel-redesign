@@ -1,43 +1,62 @@
 <template>
     <div>
         <PageContent>
-            <section class="mb-16">
+            <section class="mb-16 xl:mb-32">
                 <div class="grid grid-cols-12 mb-24 md:mb-40 border border-black">
                     <img src="/img/warsztaty2.jpg" class="w-full col-span-12 lg:col-span-8" />
-                    <div class="col-span-12 lg:col-span-4 flex flex-col justify-center gap-6 lg:gap-9 p-6 xl:p-12">
-                        <h1 class="text-4xl font-semibo">Terminy warsztatów:</h1>
-                        <ul v-if="workshop_dates.length > 0" class="list-inside text-xl">
-                            <li v-for="ws_date in workshop_dates" :key="ws_date.id" class="mb-4">
-                                <p class="uppercase">{{ ws_date.name }}:</p>
-                                <span class="mt-2">> <a :href="ws_date.link" class="border-b border-black">{{ ws_date.date }}</a></span>
-                            </li>
-                        </ul>
-                        <div v-else class="text-xl">
-                            <p class="mb-2">Brak zaplanowanych warsztatów w najbliższym czasie.</p>
-                            <p>Sprawdź mojego <a class="border-b border-black">Facebooka</a>, aby być na bieżąco.</p>
-                        </div>
-                    </div>
+                    <Suspense>
+                    <template #default>
+                        <AsyncWorkshopDatesComponent />
+                    </template>
+                    <template #fallback>
+                        <p>Loading...</p>
+                    </template>
+                </Suspense>
                 </div>
-                <div v-for="(workshop, index) in workshops" :key="workshop.id" class="grid grid-cols-2 gap-6 lg:gap-16 mb-24 xl:mb-24">
-                    <div class="col-span-2 lg:col-span-1 flex flex-col justify-center gap-6"
-                        :class="index % 2 === 0 && 'lg:order-2'">
-                        <h1 class="text-5xl text-[#731919] font-semibold">{{ workshop.name }}</h1>
-                        <div v-if="workshop.desc" class="xl:pr-16">
-                            <p v-html="workshop.desc"></p>
-                        </div>
-                        <div v-if="workshop.plan" class="">
-                            <p class="font-semibold">Plan warsztatów:</p>
-                            <ul class="list-decimal list-inside mt-2 pr-4 max-h-96 overflow-y-auto custom-scroll">
-                                <li v-for="(point, index) in workshop.plan" :key="index" class="mb-2">
-                                    <span class="mb-2">{{ point.title }}</span>
-                                    <ul v-if="point.subpoints" class="list-disc list-inside mb-2 ml-5">
-                                        <li v-for="(subpoint, index) in point.subpoints" :key="index" class="mb-1">{{ subpoint }}</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
+                <Suspense>
+                    <template #default>
+                        <AsyncWorkshopsComponent />
+                    </template>
+                    <template #fallback>
+                        <p>Loading...</p>
+                    </template>
+                </Suspense>
+            </section>
+            <section>
+                <h2 class="text-4xl md:text-5xl text-[#731919] font-semibold mb-6">Minione warsztaty:</h2>
+                <div class="flex flex-col gap-6 xl:gap-8">
+                    <div class="lg:w-2/3">
+                        <p class="mb-2">WARSZTATY „Rzeczy nienowe. DREWNO” Warsztaty konserwatorskie dla dorosłych w ramach programu rządowego „Wspieranie działań muzealnych” na projekt „Stworzenie i wyposażenie pracowni konserwatorskiej w Muzeum Tadeusza Kantora”</p>
+                        <a class="underline text-[#003450]" href="https://facebook.com/events/s/rzeczy-nienowe-warsztaty-dla-d/2011449249328897/">https://facebook.com/events/s/rzeczy-nienowe-warsztaty-dla-d/2011449249328897/</a>              
                     </div>
-                    <img :src="workshop.img" class="col-span-2 lg:col-span-1 w-full h-96 lg:h-[36rem] object-cover bg-white border border-black" />
+                    <div class="lg:w-2/3">
+                        <p class="mb-2">„MAŁE RZECZY - warsztaty rzemieślnicze dla dzieci” w ramach TARGI VINTAGE DESIGNU I WZORNICTWA</p>
+                        <a class="underline text-[#003450]" href="https://www.facebook.com/events/1730357154388442">https://www.facebook.com/events/1730357154388442</a>              
+                    </div>
+                    <div class="lg:w-2/3">
+                        <p class="mb-2">Seria warsztatów stolarsko-tapicerskich „Drugie życie przedmiotów” dla Uniwersytetu Komisji Edukacji Narodowej w Krakowie w ramach projektu pt. „Laboratorium Zmysłów” współfinansowanego przez Unię Europejską w Ramach Europejskiego Funduszu Społecznego.</p>
+                        <a class="underline text-[#003450]" href="https://www.facebook.com/share/14uMWVEymU/?mibextid=wwXIfr">https://www.facebook.com/share/14uMWVEymU/?mibextid=wwXIfr</a>              
+                    </div>
+                    <div class="lg:w-2/3">
+                        <p class="mb-2">Warsztaty Kompleksowej renowacji mebli dla „Pracownia Urządzania Wnętrz Nowohucka Siła Sprawcza/Naprawcza” w ramach festiwalu „Sztuka do Rzeczy. Design w Krakowie”</p>
+                        <a class="underline text-[#003450]" href="https://nhlab.okn.edu.pl/wydarzenie-381-pracownia_urzadzania_wnetrz.html">https://nhlab.okn.edu.pl/wydarzenie-381-pracownia_urzadzania_wnetrz.html</a>              
+                    </div>
+                    <div class="lg:w-2/3">
+                        <p class="mb-2">Warsztaty stolarsko-tapicerskie w ramach „Wiosenny Festyn Przyrodniczy // TAKI MAMY KLIMAT”, Centrum Kultury i Biblioteka Publiczna Gminy Suchy Las</p>
+                        <a class="underline text-[#003450]" href="https://osrodekkultury.pl/wydarzenia/wiosenny-festyn-przyrodniczy-taki-mamy-klimat/">https://osrodekkultury.pl/wydarzenia/wiosenny-festyn-przyrodniczy-taki-mamy-klimat/</a>              
+                    </div>
+                    <div class="lg:w-2/3">
+                        <p class="mb-2">Wykład „Niechciane skarby – polski dizajn w obiegu”, Spółdzielnia Ogniwo w ramach RETRO WEEKEND w Krakowie</p>
+                        <a class="underline text-[#003450]" href="https://karnet.krakowculture.pl/23608-krakow-retro-weekend">https://karnet.krakowculture.pl/23608-krakow-retro-weekend</a>              
+                    </div>
+                    <div class="lg:w-2/3">
+                        <p class="mb-2">Warsztaty z renowacji mebli w Hali Gwardii w Warszawie, w ramach współpracy z patyna.pl</p>
+                        <a class="underline text-[#003450]" href="https://www.facebook.com/events/2087279144821503/">https://www.facebook.com/events/2087279144821503/</a>              
+                    </div>
+                    <div class="lg:w-2/3">
+                        <p class="mb-2">Spotkanie „Niechciany design – skarby w naszych domach” | cykl koLEKCJE, Instytut Kultury Miejskiej, Gdańsk</p>
+                        <a class="underline text-[#003450]" href="https://ikm.gda.pl/wydarzenie/spotkanie-niechciany-design-skarby-naszych-domach-cykl-kolekcje/">https://ikm.gda.pl/wydarzenie/spotkanie-niechciany-design-skarby-naszych-domach-cykl-kolekcje/</a>              
+                    </div>
                 </div>
             </section>
         </PageContent>
@@ -45,30 +64,6 @@
 </template>
 
 <script setup>
-    const workshopsStore = useWorkshopsStore();
-    const workshops = ref([]);
-    const workshop_dates = ref([]);
-
-    await workshopsStore.fetchWorkshops();
-    workshops.value = workshopsStore.workshops;
-
-    await workshopsStore.fetchWorkshopDates();
-    workshop_dates.value = workshopsStore.dates;
+    const AsyncWorkshopsComponent = defineAsyncComponent(() => import('~/components/workshops/WorkshopsContainer.vue'));
+    const AsyncWorkshopDatesComponent = defineAsyncComponent(() => import('~/components/workshops/WorkshopDates.vue'));
 </script>
-
-<style scoped>
-    .custom-scroll::-webkit-scrollbar {
-        width: 9px;
-        border-radius: 16px;
-    }
-
-    .custom-scroll::-webkit-scrollbar-thumb {
-        background: rgb(31, 31, 31);
-        border-radius: 16px;
-    }
-
-    .custom-scroll::-webkit-scrollbar-track {
-        background: rgb(223, 222, 222);
-        border-radius: 16px;
-    }
-</style>

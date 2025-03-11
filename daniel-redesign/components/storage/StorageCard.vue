@@ -7,7 +7,7 @@
                 <p class="text-lg">{{ item.dimensions }}</p>
             </div>
         </div>
-        <p class="my-4 pr-12">{{ item.name }} {{ item.count && `- ${item.count} szt.` }}</p>
+        <p class="my-3 pr-12">{{ item.name }} {{ item.count && `- ${item.count} szt.` }}</p>
     </div>
 </template>
 

@@ -20,9 +20,9 @@
             <section class="bg-white mb-24 xl:mb-40">
                 <WorkshopsHeader :homepage="true" />
             </section>
-            <section class="bg-white mb-24 xl:mb-40">
+            <!-- <section class="bg-white mb-24 xl:mb-40">
                 <BlogHeader :homepage="true" />
-            </section>
+            </section> -->
             <section class="bg-white mb-24 xl:mb-40">
                 <StorageHeader :homepage="true" />
             </section>

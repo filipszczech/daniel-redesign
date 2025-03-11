@@ -8,6 +8,9 @@ export const useContentStore = defineStore('content', {
         blogPosts: [] as Array<any>,
         blogPostsPending: false,
         blogPostsError: null as string | null,
+        realizations: [] as Array<any>,
+        realizationsPending: false,
+        realizationsError: null as string | null,
     }),
     
     actions: {
@@ -35,6 +38,19 @@ export const useContentStore = defineStore('content', {
                 this.blogPostsError = error.message || 'Error fetching blog posts.';
             } finally {
                 this.blogPostsPending = false;
+            }
+        },
+        async fetchRealizations() {
+            if (this.realizations.length > 0) return;
+            this.realizationsPending = true;
+            this.realizationsError = null;
+            try {
+                const data = await $fetch('/api/realizations');
+                this.realizations = data || [];
+            } catch (error) {
+                this.realizationsError = error.message || 'Error fetching realizations.';
+            } finally {
+                this.realizationsPending = false;
             }
         }
     },

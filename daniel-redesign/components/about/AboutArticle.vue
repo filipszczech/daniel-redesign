@@ -5,8 +5,8 @@
         <div class="col-span-2 md:col-span-1 flex flex-col justify-between h-full">
             <div>
                 <h2 class="hidden md:block text-3xl lg:text-4xl xl:text-5xl text-[#003450] font-semibold mb-4">{{ article.name }}</h2>
-                <p class="xl:w-3/4 mb-4">{{ article.desc }}</p>
-                <p v-if="article.link">Źródło: {{ article.link }}</p>
+                <p class="xl:pr-16 mb-4">{{ article.desc }}</p>
+                <p v-if="article.link">Źródło:<br> <a :href="article.link" class="underline">{{ article.link }}</a></p>
             </div>
             <a v-if="article.link" :href="article.link" class="font-semibold pb-1 w-fit border-b border-[#731919] text-[#731919] mt-4">
                 przeczytaj

@@ -22,7 +22,7 @@
             <div class="flex flex-col justify-center items-center h-[70vh] md:h-[80vh]">
                 <div class="p-3 bg-white">
                     <NuxtImg format="webp" placeholder :src="photo.src" :alt="'zdjęcie: ' + photo.name" class=" max-w-[85vw] h-auto md:h-[70vh] max-h-[60vh] md:max-h-[75vh] object-cover" />
-                    <p class="pt-3 text-center">{{ photo.name }}</p>
+                    <p v-if="photo.name" class="pt-3 text-center">{{ photo.name }}</p>
                 </div>
             </div>
             <div class="flex justify-center gap-6 items-center mt-4 text-white">

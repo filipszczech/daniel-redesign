@@ -5,7 +5,7 @@
                 <ContactForm />
             </section>
             <section class="mb-12">
-                <h1 class="col-span-2 text-5xl text-[#731919] font-semibold mb-9">Dane kontaktowe</h1>
+                <h1 class="col-span-2 text-4xl md:text-5xl text-[#731919] font-semibold mb-6 md:mb-9">Dane kontaktowe</h1>
                 <div class="flex flex-col gap-12">
                     <div class="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>

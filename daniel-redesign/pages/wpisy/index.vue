@@ -3,7 +3,7 @@
         <PageContent>
             <section class="">
                 <div>
-                    <h1 class="text-6xl text-[#731919] mb-6 font-semibold">Blog</h1>
+                    <h1 class="text-4xl md:text-5xl text-[#731919] mb-6 font-semibold">Blog</h1>
                     <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-12">
                         <div v-for="post in displayedPosts" :key="post.title" class="xl:mb-12">
                             <BlogCard :post="post" />

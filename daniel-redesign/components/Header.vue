@@ -31,33 +31,33 @@
                     <!-- Navigation links for larger screens -->
                     <ul class="navbar-links hidden lg:flex col-span-2 justify-center gap-9 xl:gap-10">
                         <li @mouseover="isPortfolioOpen = true" @mouseleave="isPortfolioOpen = false" class="group bg-white relative pb-1">
-                                <div class="flex gap-2 items-center">
-                                    <p>portfolio</p>
-                                    <Icon class="transition-all duration-300 group-hover:rotate-180" size="1.1rem" name="gridicons:chevron-down" />
-                                </div>
-                                <ul v-if="isPortfolioOpen" class="navbar-links absolute bg-white bg-opacity-65 top-full py-2 w-full px-1"
-                                    v-motion
-                                    :initial="{ opacity: 0, y: -30 }"
-                                    :enter="{ opacity: 1, y: 0 }"
-                                    :leave="{ opacity: 0, y: -30 }"
-                                    :duration="400">
-                                    <li class="pb-1">
-                                        <NuxtLink to="/realizacje">
-                                            <p>realizacje</p>
-                                        </NuxtLink>
-                                    </li>
-                                    <li class="pb-1">
-                                        <NuxtLink to="/sesje">
-                                            <p>sesje</p>
-                                        </NuxtLink>
-                                    </li>
-                                </ul>
-                            </li>
-                        <li>
+                            <div class="flex gap-2 items-center">
+                                <p>portfolio</p>
+                                <Icon class="transition-all duration-300 group-hover:rotate-180" size="1.1rem" name="gridicons:chevron-down" />
+                            </div>
+                            <ul v-if="isPortfolioOpen" class="navbar-links absolute bg-white bg-opacity-65 top-full py-2 w-full px-1"
+                                v-motion
+                                :initial="{ opacity: 0, y: -30 }"
+                                :enter="{ opacity: 1, y: 0 }"
+                                :leave="{ opacity: 0, y: -30 }"
+                                :duration="400">
+                                <li class="pb-1">
+                                    <NuxtLink to="/realizacje">
+                                        <p>realizacje</p>
+                                    </NuxtLink>
+                                </li>
+                                <li class="pb-1">
+                                    <NuxtLink to="/sesje">
+                                        <p>sesje</p>
+                                    </NuxtLink>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- <li>
                             <NuxtLink to="/wpisy" class="pb-1">
                                 blog
                             </NuxtLink>
-                        </li>
+                        </li> -->
                         <li>
                             <NuxtLink to="/o-mnie" class="pb-1">
                                 bio
@@ -90,16 +90,21 @@
                                 <p>warsztaty</p>
                             </NuxtLink>
                         </li>
+                        <li class="uppercase" v-motion :initial="{ opacity: 0, scale: 0.7, x: -100,}" :enter="{opacity: 1, scale: 1, x: 0,}" :duration="500" :delay="200">
+                            <NuxtLink to="/realizacje"  @click="toggleMenu">
+                                <p>realizacje</p>
+                            </NuxtLink>
+                        </li>
                         <li class="uppercase" v-motion :initial="{ opacity: 0, scale: 0.7, x: -100,}" :enter="{opacity: 1, scale: 1, x: 0,}" :duration="500" :delay="300">
                             <NuxtLink to="/magazyn"  @click="toggleMenu">
                                 <p>storage</p>
                             </NuxtLink>
                         </li>
-                        <li class="uppercase" v-motion :initial="{ opacity: 0, scale: 0.7, x: -100,}" :enter="{opacity: 1, scale: 1, x: 0,}" :duration="500" :delay="400">
+                        <!-- <li class="uppercase" v-motion :initial="{ opacity: 0, scale: 0.7, x: -100,}" :enter="{opacity: 1, scale: 1, x: 0,}" :duration="500" :delay="400">
                             <NuxtLink to="/wpisy"  @click="toggleMenu">
                                 <p>blog</p>
                             </NuxtLink>
-                        </li>
+                        </li> -->
                         <li class="uppercase" v-motion :initial="{ opacity: 0, scale: 0.7, x: -100,}" :enter="{opacity: 1, scale: 1, x: 0,}" :duration="500" :delay="500">
                             <NuxtLink to="/o-mnie"  @click="toggleMenu">
                                 <p>bio</p>
