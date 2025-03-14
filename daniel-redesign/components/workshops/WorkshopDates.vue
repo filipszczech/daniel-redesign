@@ -4,7 +4,7 @@
         <ul v-if="workshopDates.length > 0" class="list-inside text-xl">
             <li v-for="ws_date in workshopDates" :key="ws_date.id" class="mb-4">
                 <p class="uppercase">{{ ws_date.name }}:</p>
-                <span class="mt-2">> <a :href="ws_date.link" class="border-b border-black">{{ ws_date.date }}</a></span>
+                <span class="mt-2">> <a :href="ws_date.link" target="_blank" rel="noopener" :aria-label="'termin warsztatu ' + ws_date.name" class="border-b border-black">{{ ws_date.date }}</a></span>
             </li>
         </ul>
         <div v-else class="text-xl">

@@ -4,7 +4,7 @@
             <div class="py-9 border-t border-[#003450] bg-white">
                 <div class="flex justify-center mb-6">
                     <NuxtLink to="/" class="mx-auto w-fit">
-                        <img src="/img/logo.png" alt="Daniel Stoiński Redesign logo" class="h-20" />
+                        <NuxtImg src="/img/logo.png" alt="Daniel Stoiński Redesign logo" class="h-10 md:h-12" />
                     </NuxtLink>
                 </div>
                 <ul class="navbar-links flex flex-wrap justify-center gap-5 md:gap-9 mb-9 mx-auto">
@@ -23,11 +23,11 @@
                             storage
                         </NuxtLink>
                     </li>
-                    <li>
+                    <!-- <li>
                         <NuxtLink to="/wpisy" class="pb-1">
                             blog
                         </NuxtLink>
-                    </li>
+                    </li> -->
                     <li>
                         <NuxtLink to="/o-mnie" class="pb-1">
                             bio

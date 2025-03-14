@@ -19,7 +19,7 @@
                     </ul>
                 </div>
             </div>
-            <img :src="workshop.img" class="col-span-2 lg:col-span-1 w-full h-96 lg:h-[36rem] object-cover bg-white border border-black" />
+            <NuxtImg :src="workshop.img" :alt="'zdjęcie z warsztatu: ' + workshop.name" class="col-span-2 lg:col-span-1 w-full h-96 lg:h-[36rem] object-cover bg-white border border-black" />
         </div>
     </div>
 </template>

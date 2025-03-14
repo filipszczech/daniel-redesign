@@ -27,7 +27,7 @@
                 </form>
             </div>
             <div class="hidden lg:flex justify-end">
-                <img src="/img/kontakt.jpg" class="w-3/4 object-cover bg-white border border-black" />
+                <NuxtImg src="/img/kontakt.jpg" alt="Daniel Stoiński - kontakt" class="w-3/4 object-cover bg-white border border-black" />
             </div>
         </div>
     </div>

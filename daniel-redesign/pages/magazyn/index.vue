@@ -1,7 +1,7 @@
 <template>
     <div>
         <PageContent>
-            <section class="mb-32 xl:mb-40">
+            <section class="mb-16 xl:mb-24">
                 <StorageHeader />
             </section>
             <Suspense>

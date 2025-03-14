@@ -2,7 +2,7 @@
     <div>
         <header>
             <nav class="w-full z-50 bg-white">
-                <div class="fixed top-0 z-50 bg-white w-full grid grid-cols-6 items-center py-4 px-6 lg:px-12 lg:text-lg transition-transform duration-300"
+                <div class="fixed top-0 z-50 bg-white w-full grid grid-cols-6 items-center py-4 lg:py-6 px-6 lg:px-12 lg:text-lg transition-transform duration-300"
                     :class="{ '-translate-y-full': !isVisible }">
                     <ul class="navbar-links hidden lg:flex justify-center col-span-2 gap-9 xl:gap-10">
                         <li>
@@ -21,12 +21,12 @@
                     </ul>
                     <div class="col-span-3 lg:col-span-2 flex justify-start lg:justify-center">
                         <NuxtLink to="/">
-                            <img src="/img/logo.png" alt="Daniel Stoiński Redesign logo" class="h-16 lg:h-20" />
+                            <NuxtImg src="/img/logo.png" alt="Daniel Stoiński Redesign logo" class="h-9 md:h-12" />
                         </NuxtLink>
                     </div>
                     <!-- Hamburger menu icon for small screens -->
                     <div class="col-span-3 flex justify-end lg:hidden hover-scale-105 cursor-pointer" @click="toggleMenu">
-                        <Icon name="mdi:hamburger-menu" style="color: black" size="2rem" />
+                        <Icon name="mdi:hamburger-menu" style="color: black" size="1.75rem" />
                     </div>
                     <!-- Navigation links for larger screens -->
                     <ul class="navbar-links hidden lg:flex col-span-2 justify-center gap-9 xl:gap-10">

@@ -1,7 +1,7 @@
 <template>
     <div>
         <PageContent>
-            <section class="mb-24 xl:mb-40">
+            <section class="mb-16 xl:mb-32">
                 <ContactForm />
             </section>
             <section class="mb-12">

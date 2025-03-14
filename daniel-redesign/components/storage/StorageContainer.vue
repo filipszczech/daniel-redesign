@@ -1,7 +1,7 @@
 <template>
      <section class="grid grid-cols-12 gap-8 bg-white">
         <h2 class="col-span-12 text-3xl">Obecny stan magazynu:</h2>
-        <div class="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3"
+        <div class="col-span-6 md:col-span-4 lg:col-span-3"
             v-for="item in displayedStorage"
             :key="item.id">
             <StorageCard :item="item" />
