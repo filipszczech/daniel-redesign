@@ -4,7 +4,7 @@
             <h1 class="text-4xl md:text-5xl text-[#731919] font-semibold mb-6 lg:mb-9">Realizacje</h1>
             <Suspense>
                 <template #default>
-                    <AsyncRealizationsComponent />
+                    <AsyncGalleryComponent :type="'realizations'" />
                 </template>
                 <template #fallback>
                     <p>Loading...</p>
@@ -15,5 +15,5 @@
 </template>
 
 <script setup>
-    const AsyncRealizationsComponent = defineAsyncComponent(() => import('~/components/RealizationsGallery.vue'));
+    const AsyncGalleryComponent = defineAsyncComponent(() => import('~/components/PhotoGallery.vue'));
 </script>

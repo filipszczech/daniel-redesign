@@ -11,6 +11,9 @@ export const useContentStore = defineStore('content', {
         realizations: [] as Array<any>,
         realizationsPending: false,
         realizationsError: null as string | null,
+        sessions: [] as Array<any>,
+        sessionsPending: false,
+        sessionsError: null as string | null,
     }),
     
     actions: {
@@ -51,6 +54,19 @@ export const useContentStore = defineStore('content', {
                 this.realizationsError = error.message || 'Error fetching realizations.';
             } finally {
                 this.realizationsPending = false;
+            }
+        },
+        async fetchSessions() {
+            if (this.sessions.length > 0) return;
+            this.sessionsPending = true;
+            this.sessionsError = null;
+            try {
+                const data = await $fetch('/api/sessions');
+                this.sessions = data || [];
+            } catch (error) {
+                this.sessionsError = error.message || 'Error fetching sessions.';
+            } finally {
+                this.sessionsPending = false;
             }
         }
     },

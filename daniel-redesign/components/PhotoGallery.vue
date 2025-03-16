@@ -31,10 +31,23 @@
 </template>
   
 <script setup>
+    const props = defineProps({
+        type: { 
+            type: String, 
+            required: true, 
+            validator: (value) => ['realizations', 'sessions'].includes(value) 
+        }
+    });
     const contentStore = useContentStore();
     const photos = ref([]);
-    await contentStore.fetchRealizations();
-    photos.value = contentStore.realizations;
+    
+    if(props.type === 'realizations') {
+        await contentStore.fetchRealizations();
+        photos.value = contentStore.realizations;
+    } else if(props.type === 'sessions') {
+        await contentStore.fetchSessions();
+        photos.value = contentStore.sessions;
+    }
 
     const photosPerPage = 36;
     const currentPage = ref(1);
