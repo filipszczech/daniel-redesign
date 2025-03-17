@@ -1,6 +1,7 @@
 <template>
     <div>
         <PageContent>
+            <h1 class="w-[1px] h-[1px] overflow-hidden">Daniel Stoiński Redesign - informacje o właścicielu pracowni i jego aktywności w mediach.</h1>
             <section class="mb-32">
                 <AboutHeader />
             </section>
@@ -20,4 +21,16 @@
 
 <script setup>
     const AsyncArticlesComponent = defineAsyncComponent(() => import('~/components/Articles.vue'));
+
+    useHead({
+        title: "Daniel Stoiński Redesign | bio",
+        meta: [
+            { name: 'og:title', content: 'Daniel Stoiński Redesign | bio' },
+            { name: 'description', content: 'Daniel Stoiński Redesign - informacje o właścicielu pracowni i jego aktywności w mediach.' },
+            { property: 'og:description', content: 'Daniel Stoiński Redesign - informacje o właścicielu pracowni i jego aktywności w mediach.' },
+        ],
+        htmlAttrs: {
+            lang: 'pl'
+        },
+    });
 </script>

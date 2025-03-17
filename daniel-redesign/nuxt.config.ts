@@ -7,15 +7,11 @@ export default defineNuxtConfig({
     head: {
       title: 'Daniel Stoiński Redesign',
       meta: [
-        { name: "description", content: 'desc' },
-        { property: 'og:url', content: 'url' },
         { property: 'og:title', content: 'Daniel Stoiński Redesign' },
-        { property: 'og:description', content: 'og desc' },
-        { property: 'og:image', content: '' },
         { property: 'og:type', content: 'website' },
 
-        { name: 'twitter:title', content: 'title' },
-        { name: 'twitter:description', content: 'twitter desc' },
+        { name: 'twitter:title', content: 'Daniel Stoiński Redesign' },
+        { name: 'twitter:description', content: 'Daniel Stoiński Redesign - pracownia renowacji mebli' },
         { name: 'twitter:image', content: '' },
         { name: 'twitter:card', content: 'summary' },
 
@@ -34,7 +30,7 @@ export default defineNuxtConfig({
         pass: process.env.EMAIL_PASS,
       },
     },
-  }], '@pinia/nuxt', '@nuxt/icon', '@nuxt/fonts', '@vueuse/motion/nuxt', '@nuxt/content'],
+  }], '@pinia/nuxt', '@nuxt/icon', '@nuxt/fonts', '@vueuse/motion/nuxt', '@nuxt/content', '@nuxtjs/robots', '@nuxtjs/sitemap'],
   mail: {
     message: {
       to: process.env.EMAIL_USER,
@@ -50,7 +46,17 @@ export default defineNuxtConfig({
   supabase: {
     redirect: false
   },
+  site: {
+    url: 'http://www.danielstoinskiredesign.pl',
+    name: 'Daniel Stoiński Redesign',
+  },
   content: {
     documentDriven: true
+  },
+  robots: {
+    disallow: '', 
+    sitemap: [
+      'http://www.danielstoinskiredesign.pl/sitemap.xml',
+    ],
   },
 })

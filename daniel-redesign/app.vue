@@ -9,17 +9,9 @@
 <script setup>
     useHead({
       meta: [
-        { name: "description", content: '' },
-        { property: 'og:url', content: '' },
-        { property: 'og:title', content: '' },
-        { property: 'og:description', content: '' },
-        { property: 'og:image', content: '' },
+        { property: 'og:url', content: 'http://danielstoinskiredesign.pl/' },
         { property: 'og:type', content: 'website' },
-
-        { name: 'twitter:title', content: '' },
-        { name: 'twitter:description', content: '' },
-        { name: 'twitter:image', content: '' },
-        { name: 'twitter:card', content: '' },
+        { property: 'og:image', content: '/img/logo_panel.jpg' },
 
         { name: 'viewport', content: 'width=device-width, initial-scale=1' }
       ],

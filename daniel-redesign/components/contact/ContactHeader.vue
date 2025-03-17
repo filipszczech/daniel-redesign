@@ -1,6 +1,6 @@
 <template>
     <div class="grid grid-cols-2 gap-8">
-        <h1 class="col-span-2 text-4xl md:text-5xl text-[#731919] font-semibold lg:mb-3">Kontakt</h1>
+        <h2 class="col-span-2 text-4xl md:text-5xl text-[#731919] font-semibold lg:mb-3">Kontakt</h2>
         <div class="col-span-2 flex flex-col gap-12">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:w-2/3">
                 <div>

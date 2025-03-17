@@ -1,6 +1,6 @@
 <template>
     <div class="col-span-12 lg:col-span-4 flex flex-col justify-center gap-6 lg:gap-9 p-6 xl:p-12">
-        <h1 class="text-4xl font-semibo">Terminy warsztatów:</h1>
+        <h2 class="text-4xl font-semibo">Terminy warsztatów:</h2>
         <ul v-if="workshopDates.length > 0" class="list-inside text-xl">
             <li v-for="ws_date in workshopDates" :key="ws_date.id" class="mb-4">
                 <p class="uppercase">{{ ws_date.name }}:</p>

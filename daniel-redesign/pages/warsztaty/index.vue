@@ -1,6 +1,7 @@
 <template>
     <div>
         <PageContent>
+            <h1 class="w-[1px] h-[1px] overflow-hidden">Daniel Stoiński Redesign - informacje na temat warsztatów prowadzonych przeze mnie w mojej pracowni, jak również poza nią. Są to warsztaty dotyczące renowacji mebli oraz historii sztuki.</h1>
             <section class="mb-16 xl:mb-32">
                 <div class="grid grid-cols-12 mb-24 md:mb-40 border border-black">
                     <img src="/img/warsztaty2.jpg" class="w-full col-span-12 lg:col-span-8" />
@@ -66,4 +67,16 @@
 <script setup>
     const AsyncWorkshopsComponent = defineAsyncComponent(() => import('~/components/workshops/WorkshopsContainer.vue'));
     const AsyncWorkshopDatesComponent = defineAsyncComponent(() => import('~/components/workshops/WorkshopDates.vue'));
+
+    useHead({
+        title: "Daniel Stoiński Redesign | warsztaty",
+        meta: [
+            { name: 'og:title', content: 'Daniel Stoiński Redesign | warsztaty' },
+            { name: 'description', content: 'Daniel Stoiński Redesign - informacje na temat warsztatów prowadzonych przeze mnie w mojej pracowni, jak również poza nią. Są to warsztaty dotyczące renowacji mebli oraz historii sztuki.' },
+            { property: 'og:description', content: 'Daniel Stoiński Redesign - informacje na temat warsztatów prowadzonych przeze mnie w mojej pracowni, jak również poza nią. Są to warsztaty dotyczące renowacji mebli oraz historii sztuki.' },
+        ],
+        htmlAttrs: {
+            lang: 'pl'
+        },
+    });
 </script>

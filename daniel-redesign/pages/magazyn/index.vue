@@ -2,6 +2,7 @@
     <div>
         <StorageModal v-if="modalOpen" :item="modalItem" @close="closeModal" />
         <PageContent>
+            <h1 class="w-[1px] h-[1px] overflow-hidden">Daniel Stoiński Redesign - zawartość magazynu pracowni. Znajdują się tu zarówno meble w stanie do ranowacji, jak i gotowe do użytku produkty.</h1>
             <section class="mb-16 xl:mb-24">
                 <StorageHeader />
             </section>
@@ -55,5 +56,17 @@
 
     onBeforeUnmount(() => {
         window.removeEventListener('keydown', handleKeydown);
+    });
+
+    useHead({
+        title: "Daniel Stoiński Redesign | storage",
+        meta: [
+            { name: 'og:title', content: 'Daniel Stoiński Redesign | storage' },
+            { name: 'description', content: 'Daniel Stoiński Redesign - zawartość magazynu pracowni. Znajdują się tu zarówno meble w stanie do ranowacji, jak i gotowe do użytku produkty.' },
+            { property: 'og:description', content: 'Daniel Stoiński Redesign - zawartość magazynu pracowni. Znajdują się tu zarówno meble w stanie do ranowacji, jak i gotowe do użytku produkty.' },
+        ],
+        htmlAttrs: {
+            lang: 'pl'
+        },
     });
 </script>

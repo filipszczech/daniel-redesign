@@ -1,6 +1,7 @@
 <template>
     <div>
         <PageContent>
+            <h1 class="w-[1px] h-[1px] overflow-hidden">Daniel Stoiński Redesign - informacje o wszelkich możliwościach kontaktu oraz lokalizacji i godzinach otwarcia pracowni.</h1>
             <section class="mb-16 xl:mb-32">
                 <ContactForm />
             </section>
@@ -43,9 +44,15 @@
 </template>
 
 <script setup>
-
+    useHead({
+        title: "Daniel Stoiński Redesign | kontakt",
+        meta: [
+            { name: 'og:title', content: 'Daniel Stoiński Redesign | kontakt' },
+            { name: 'description', content: 'Daniel Stoiński Redesign - informacje o wszelkich możliwościach kontaktu oraz lokalizacji i godzinach otwarcia pracowni.' },
+            { property: 'og:description', content: 'Daniel Stoiński Redesign - informacje o wszelkich możliwościach kontaktu oraz lokalizacji i godzinach otwarcia pracowni.' },
+        ],
+        htmlAttrs: {
+            lang: 'pl'
+        },
+    });
 </script>
-
-<style lang="scss" scoped>
-
-</style>

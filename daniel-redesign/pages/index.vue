@@ -14,6 +14,7 @@
             </div>
         </section>
         <PageContent>
+            <h1 class="w-[1px] h-[1px] overflow-hidden">Daniel Stoiński Redesign - pracownia renowacji mebli i tradycyjnego rzemiosła, znajdująca się w Krakowie. Oferta pracowni obejmuje: renwoację mebli dostarczonych przez klienta, sprzedaż, warsztaty.</h1>
             <!-- <section class="bg-white mb-24 xl:my-40">
                 <EbookHeader :homepage="true" />
             </section> -->
@@ -45,4 +46,16 @@
 
 <script setup>
     const AsyncWorkshopsHeader = defineAsyncComponent(() => import('~/components/workshops/WorkshopsHeader.vue'));
+
+    useHead({
+        title: "Daniel Stoiński Redesign",
+        meta: [
+            { name: 'og:title', content: 'Daniel Stoiński Redesign' },
+            { name: 'description', content: 'Daniel Stoiński Redesign - pracownia tradycyjnego rzemiosła i renowacji mebli, znajdująca się w Krakowie. Oferuję sprzedaż oraz usługi renowacji, dostosowane pod klienta indywidualnego.' },
+            { property: 'og:description', content: 'Daniel Stoiński Redesign - pracownia tradycyjnego rzemiosła i renowacji mebli, znajdująca się w Krakowie. Oferuję sprzedaż oraz usługi renowacji, dostosowane pod klienta indywidualnego.' },
+        ],
+        htmlAttrs: {
+            lang: 'pl'
+        },
+    });
 </script>
