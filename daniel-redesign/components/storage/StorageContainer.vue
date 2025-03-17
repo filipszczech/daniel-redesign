@@ -4,7 +4,14 @@
         <div class="col-span-6 md:col-span-4 lg:col-span-3"
             v-for="item in displayedStorage"
             :key="item.id">
-            <StorageCard :item="item" />
+            <div @click="openModal(item)" class="w-full relative group cursor-pointer">
+                <NuxtImg :src="item.images && item.images[0]" :alt="'mebel po renowacji: ' + item.name" class="w-full h-72 xl:h-96 object-cover" />
+                <div class="absolute inset-0 flex flex-col items-center justify-center px-4 bg-black/40 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p v-if="item.dimensions" class="text-lg text-center mb-2">wymiary:<br>{{ item.dimensions }}</p>
+                    <p class="text-lg text-center">stan:<br>do renowacji</p>
+                </div>
+            </div>
+            <p class="text-sm md:text-base my-3 md:pr-12">{{ item.name }} {{ item.count && `- ${item.count} szt.` }}</p>
         </div>
         <button
             v-if="storageToShow < allStorage.length"
@@ -17,6 +24,7 @@
 </template>
 
 <script setup>
+    const emit = defineEmits(['openModal']);
     const furnitureStore = useFurnitureStore();
     
     const allStorage = ref([]);
@@ -32,4 +40,7 @@
         displayedStorage.value = allStorage.value.slice(0, storageToShow.value);
     };
 
+    const openModal = (item) => {
+        emit('openModal', item);
+    };
 </script>

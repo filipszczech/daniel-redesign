@@ -1,13 +1,13 @@
 <template>
     <div>
-        <div class="columns-1 sm:columns-2 md:columns-3 gap-5 mb-3 xl:mb-5">
+        <div class="columns-1 sm:columns-2 md:columns-3 gap-5 mb-3 xl:mb-5 relative">
+            <div v-show="loaderActive" class="absolute top-0 left-0 w-full h-full bg-white z-10 transition-all duration-500">
+                <div class="flex justify-center items-center w-full mt-12">
+                    <NuxtImg src="/img/loading.gif" alt="loader" class="w-16 h-16" />
+                </div>
+            </div>
             <div v-for="photo in paginatedPhotos" :key="photo.id" class="w-full break-inside-avoid mb-3 sm:mb-5 overflow-hidden"
                 placeholder
-                loading="lazy"
-                v-motion
-                :initial="{ opacity: 0, y: 30 }"
-                :visibleOnce="{ opacity: 1, y: 0 }"
-                :duration="600"
                 >
                 <NuxtImg :src="photo.src" @click="openModal(photo)" :alt="'zdjęcie realizacji: ' + photo.id" class="w-full object-cover md:hover:scale-[1.02] transition-all duration-500 md:cursor-pointer" />
             </div>
@@ -40,7 +40,8 @@
     });
     const contentStore = useContentStore();
     const photos = ref([]);
-    
+    const loaderActive = ref(false);
+
     if(props.type === 'realizations') {
         await contentStore.fetchRealizations();
         photos.value = contentStore.realizations;
@@ -61,10 +62,18 @@
 
     const isLargeScreen = computed(() => window.innerWidth >= 768);
 
+    const showLoader = () => {
+        loaderActive.value = true;
+        setTimeout(() => {
+            loaderActive.value = false;
+        }, 1500);
+    };
+
     const goToPage = (page) => {
         if (page > 0 && page <= totalPages.value) {
             currentPage.value = page;
             window.scrollTo({ top: 0, behavior: 'smooth' });
+            showLoader();
         }
     };
     
@@ -114,6 +123,7 @@
     };
 
     onMounted(() => {
+        showLoader();
         window.addEventListener('keydown', handleKeydown);
     });
 

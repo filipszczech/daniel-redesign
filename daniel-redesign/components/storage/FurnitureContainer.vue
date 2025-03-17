@@ -6,8 +6,8 @@
             :key="item.id"
             class="col-span-6 md:col-span-4 lg:col-span-3"
             >
-            <div class="w-full relative group">
-                <NuxtImg :src="item.img" :alt="'mebel po renowacji: ' + item.name" class="w-full h-72 xl:h-96 object-cover" />
+            <div @click="openModal(item)" class="w-full relative group cursor-pointer">
+                <NuxtImg :src="item.images && item.images[0]" :alt="'mebel po renowacji: ' + item.name" class="w-full h-72 xl:h-96 object-cover" />
                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-black/40 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <p class="text-lg">wymiary:</p>
                     <p class="text-lg">{{ item.dimensions }}</p>
@@ -26,6 +26,7 @@
 </template>
 
 <script setup>
+    const emit = defineEmits(['openModal']);
    const furnitureStore = useFurnitureStore();
 
     const allFurniture = ref([]);
@@ -41,4 +42,7 @@
         displayedFurniture.value = allFurniture.value.slice(0, furnitureToShow.value);
     };
 
+    const openModal = (item) => {
+        emit('openModal', item);
+    };
 </script>
