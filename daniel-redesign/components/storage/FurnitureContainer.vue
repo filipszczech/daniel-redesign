@@ -6,7 +6,7 @@
             :key="item.id"
             class="col-span-6 md:col-span-4 lg:col-span-3"
             >
-            <div @click="openModal(item)" class="w-full relative group cursor-pointer">
+            <div class="w-full relative group cursor-pointer">
                 <NuxtImg :src="item.images && item.images[0]" :alt="'mebel po renowacji: ' + item.name" class="w-full h-64 sm:h-72 xl:h-96 object-cover" />
                 <div class="absolute inset-0 hidden md:flex flex-col items-center justify-center bg-black/40 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <p class="text-lg">wymiary:</p>
@@ -34,11 +34,11 @@
     allFurniture.value = furnitureStore.furniture;
 
     const displayedFurniture = ref([]);
-    const furnitureToShow = ref(4);
+    const furnitureToShow = ref(8);
     displayedFurniture.value = allFurniture.value.slice(0, furnitureToShow.value);
 
     const loadMoreFurniture = () => {
-        furnitureToShow.value += 4;
+        furnitureToShow.value += 8;
         displayedFurniture.value = allFurniture.value.slice(0, furnitureToShow.value);
     };
 

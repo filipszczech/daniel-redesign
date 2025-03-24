@@ -4,7 +4,7 @@
             <h2 class="text-4xl md:text-5xl text-[#731919] font-semibold">Daniel Stoiński</h2>
             <NuxtImg src="https://www.asp.krakow.pl/wp-content/uploads/2024/06/3.-Daniel-Stoinski.jpg" alt="Daniel Stoiński - zdjęcie profilowe" class="md:hidden col-span-2 w-full h-[28rem] object-cover bg-white border border-black" />
             <h3>
-                Jestem kulturoznawcą i czeladnikiem tradycyjnego rzemiosła, specjalizującym się w meblarstwie oraz renowacji. Od 10 lat zajmuję się kompleksową renowacją mebli, prowadząc stolarsko-tapicerskie warsztaty i szkolenia. Mam doświadczenie w pracy na Wydziale Sztuki Uniwersytetu KEN w Krakowie, gdzie uczę przyszłych mistrzów rzemiosła.    
+                Jestem kulturoznawcą i czeladnikiem tradycyjnego rzemiosła, właścicielem pracowni renowacji mebli Daniel Stoiński Redesign oraz sklepu z powojennym dizajnem Pikasy Sklep. Od 11 lat zajmuję się kompleksową renowacją mebli, prowadząc stolarsko-tapicerskie warsztaty i szkolenia. Mam również przyjemność być ekspertem w programie telewizyjnym „Łowcy Skarbów. Kto da więcej” w TV4. Prywatnie jestem kolekcjonerem powojennego wzornictwa oraz ojcem dwóch charcich adopciaków Abbie i Sake.   
             </h3>
             <div v-if="homepage" class="flex justify-end md:justify-start">
                 <NuxtLink to="/o-mnie"  class="px-1 font-semibold pb-1 w-fit border-b border-[#003450] text-[#003450] flex justify-center items-center cursor-pointer">

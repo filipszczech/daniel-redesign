@@ -32,11 +32,11 @@
     allStorage.value = furnitureStore.storage;
     
     const displayedStorage = ref([]);
-    const storageToShow = ref(4);
+    const storageToShow = ref(8);
     displayedStorage.value = allStorage.value.slice(0, storageToShow.value);
 
     const loadMoreStorage = () => {
-        storageToShow.value += 4;
+        storageToShow.value += 8;
         displayedStorage.value = allStorage.value.slice(0, storageToShow.value);
     };
 

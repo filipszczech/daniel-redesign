@@ -71,7 +71,7 @@
                     </ul>
                 </div>
                 <transition name="slide-down">
-                    <ul v-if="isMenuOpen" class="fixed lg:hidden top-0 left-0 z-50 bg-white w-screen h-screen max-h-screen navbar-links flex flex-col justify-center pl-12 sm:pl-20 text-3xl gap-4 pb-2 pr-4 sm:pr-6">    
+                    <ul v-if="isMenuOpen" class="fixed lg:hidden top-0 left-0 z-50 bg-white w-screen h-screen max-h-screen navbar-links flex flex-col justify-center pl-12 sm:pl-20 text-2xl gap-4 pb-2 pr-4 sm:pr-6">    
                         <button @click="toggleMenu" class="absolute top-12 right-12">
                             <Icon name="ci:close-big" size="2.5rem" />
                         </button>
@@ -93,6 +93,11 @@
                         <li class="uppercase" v-motion :initial="{ opacity: 0, scale: 0.7, x: -100,}" :enter="{opacity: 1, scale: 1, x: 0,}" :duration="500" :delay="200">
                             <NuxtLink to="/realizacje"  @click="toggleMenu">
                                 <p>realizacje</p>
+                            </NuxtLink>
+                        </li>
+                        <li class="uppercase" v-motion :initial="{ opacity: 0, scale: 0.7, x: -100,}" :enter="{opacity: 1, scale: 1, x: 0,}" :duration="500" :delay="200">
+                            <NuxtLink to="/sesje"  @click="toggleMenu">
+                                <p>sesje</p>
                             </NuxtLink>
                         </li>
                         <li class="uppercase" v-motion :initial="{ opacity: 0, scale: 0.7, x: -100,}" :enter="{opacity: 1, scale: 1, x: 0,}" :duration="500" :delay="300">
