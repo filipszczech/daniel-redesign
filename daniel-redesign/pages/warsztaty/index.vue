@@ -3,8 +3,8 @@
         <PageContent>
             <h1 class="w-[1px] h-[1px] overflow-hidden">Daniel Stoiński Redesign - informacje na temat warsztatów prowadzonych przeze mnie w mojej pracowni, jak również poza nią. Są to warsztaty dotyczące renowacji mebli oraz historii sztuki.</h1>
             <section class="mb-16 xl:mb-32">
-                <div class="grid grid-cols-12 gap-0 mb-24 md:mb-40 border border-black">
-                    <div class="w-full col-span-12 lg:col-span-7">
+                <div class="grid grid-cols-12 gap-0 mb-24 md:mb-56 border border-black">
+                    <div class="w-full col-span-12 md:col-span-7">
                         <img src="/img/warsztaty2.jpg" class="w-full h-full object-cover" />
                     </div>
                     <Suspense>
@@ -25,7 +25,7 @@
                     </template>
                 </Suspense>
             </section>
-            <section>
+            <section class="mb-6 lg:mb-20">
                 <h2 class="text-4xl md:text-5xl text-[#731919] font-semibold mb-6">Minione wydarzenia:</h2>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
                     <div v-for="item in events" :key="item.id" class="">

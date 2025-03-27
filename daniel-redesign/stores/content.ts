@@ -5,6 +5,9 @@ export const useContentStore = defineStore('content', {
         articles: [] as Array<any>,
         articlesPending: false,
         articlesError: null as string | null,
+        television: [] as Array<any>,
+        televisionPending: false,
+        televisionError: null as string | null,
         blogPosts: [] as Array<any>,
         blogPostsPending: false,
         blogPostsError: null as string | null,
@@ -28,6 +31,19 @@ export const useContentStore = defineStore('content', {
                 this.articlesError = error.message || 'Error fetching articles.';
             } finally {
                 this.articlesPending = false;
+            }
+        },
+        async fetchTelevision() {
+            if (this.television.length > 0) return;
+            this.televisionPending = true;
+            this.televisionError = null;
+            try {
+                const data = await $fetch('/api/television');
+                this.television = data || [];
+            } catch (error) {
+                this.televisionError = error.message || 'Error fetching television.';
+            } finally {
+                this.televisionPending = false;
             }
         },
         async fetchBlogPosts() {

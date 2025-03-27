@@ -4,7 +4,7 @@
             Artykuły
         </h2>
         <p class="mb-9 xl:w-2/3">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed etiam, quamquam in hac divisione rem ipsam prorsus probo. Quae cum dixisset paulumque institisset, Quid est? Duo Reges: constructio interrete
+            Mówiono i pisano o mnie za co jestem ogromnie wdzięczny! Zainteresowanych zapraszam do sentymentalnej podróży pełnej pasji do rzemiosła, wzornictwa i meblarstwa.     
         </p>
         <div class="flex flex-col gap-16 md:gap-24">
             <div v-for="article in articles" :key="article.title">

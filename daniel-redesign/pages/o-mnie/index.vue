@@ -15,12 +15,23 @@
                     </template>
                 </Suspense>
             </section>
+            <section class="mb-12 xl:mb-24">
+                <Suspense>
+                    <template #default>
+                        <AsyncTvComponent />
+                    </template>
+                    <template #fallback>
+                        <p>Loading...</p>
+                    </template>
+                </Suspense>
+            </section>
         </PageContent>
     </div>
 </template>
 
 <script setup>
     const AsyncArticlesComponent = defineAsyncComponent(() => import('~/components/Articles.vue'));
+    const AsyncTvComponent = defineAsyncComponent(() => import('~/components/Television.vue'));
 
     useHead({
         title: "Daniel Stoiński Redesign | bio",

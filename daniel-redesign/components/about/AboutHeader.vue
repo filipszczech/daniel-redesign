@@ -11,13 +11,13 @@
                     o mnie
                 </NuxtLink>
             </div>
-            <div v-else>
+            <!-- <div v-else>
                 <ul class="list-disc list-inside mt-3">
                     <li class="mb-2">Właściciel pracowni renowacji mebli "Daniel Stoiński Redesign"</li>
                     <li class="mb-2">Specjalista w meblarstwie i renowacji mebli</li>
                     <li>Organizator warsztatów i szkoleń stolarskich</li>
                 </ul>
-            </div>
+            </div> -->
         </div>
         <img src="https://www.asp.krakow.pl/wp-content/uploads/2024/06/3.-Daniel-Stoinski.jpg" class="hidden md:block col-span-1 w-full h-[40rem] object-cover bg-white border border-black" />
     </div>

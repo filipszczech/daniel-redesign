@@ -1,20 +1,20 @@
 <template>
-    <div class="col-span-12 lg:col-span-5 flex flex-col lg:justify-between p-4 lg:p-6">
+    <div class="col-span-12 md:col-span-5 flex flex-col lg:justify-between p-4 lg:p-6">
         <div>
             <h2 class="text-3xl lg:text-4xl mb-4 text-[#731919]">Nadchodzące warsztaty:</h2>
-            <ul v-if="workshopDates.length > 0" class="list-inside text-lg bg-red-3 pb-4 lg:max-h-48 xl:max-h-64 overflow-y-auto custom-scroll">
+            <ul v-if="workshopDates.length > 0" class="list-inside text-base lg:text-lg pb-4 lg:max-h-48 xl:max-h-64 overflow-y-auto custom-scroll">
                 <li v-for="ws_date in workshopDates" :key="ws_date.id" class="mb-4">
                     <span class="w-fit">> {{ ws_date.name }}</span><br>
                     <span class="mt-2">Data wydarzenia: <a :href="ws_date.link" target="_blank" rel="noopener" :aria-label="'termin warsztatu ' + ws_date.name" class="border-b border-black">{{ formatDate(ws_date.date, ws_date.date_end) }}</a></span>
                 </li>
             </ul>
-            <div v-else class="text-lg">
+            <div v-else class="text-base lg:text-lg">
                 <p class="mb-2">Brak zaplanowanych warsztatów w najbliższym czasie.</p>
             </div>
         </div>
         <div class="lg:text-end">
             <!-- <p class="text-lg lg:mb-4">Zaobserwuj <a class="border-b border-black">Facebooka</a>, aby być na bieżąco.</p> -->
-            <p class="text-lg">
+            <p class="text-base lg:text-lg">
                 Zapisy na adres:<br><span class="border-b border-black">halo@danielstoinskiredesign.pl</span>
             </p>
         </div>

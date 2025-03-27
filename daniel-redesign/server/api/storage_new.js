@@ -4,6 +4,7 @@ export default defineEventHandler(async (event) => {
   const { data, error } = await supabase_client
     .from('Magazyn Nowe')
     .select('*')
+    .eq('active', true)
     .order('order', { ascending: true, nullsFirst: false });
 
   if (error) {

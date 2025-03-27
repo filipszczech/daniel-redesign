@@ -8,7 +8,7 @@
             </section>
             <Suspense>
                 <template #default>
-                    <AsyncFurnitureComponent @openModal="handleOpenModal" />
+                    <AsyncFurnitureComponent />
                 </template>
                 <template #fallback>
                     <p>Loading...</p>
