@@ -11,7 +11,9 @@
                         <AsyncArticlesComponent />
                     </template>
                     <template #fallback>
-                        <p>Loading...</p>
+                        <div class="my-12">
+                            <Loader />
+                        </div>
                     </template>
                 </Suspense>
             </section>
@@ -21,7 +23,9 @@
                         <AsyncTvComponent />
                     </template>
                     <template #fallback>
-                        <p>Loading...</p>
+                        <div class="my-12">
+                            <Loader />
+                        </div>
                     </template>
                 </Suspense>
             </section>

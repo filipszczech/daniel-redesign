@@ -8,7 +8,9 @@
                     <AsyncGalleryComponent :type="'sessions'" />
                 </template>
                 <template #fallback>
-                    <p>Loading...</p>
+                    <div class="my-12">
+                        <Loader />
+                    </div>
                 </template>
             </Suspense>
         </PageContent>

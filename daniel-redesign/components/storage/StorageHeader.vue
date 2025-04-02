@@ -3,8 +3,6 @@
         <div class="col-span-2 md:col-span-1 hidden md:grid grid-cols-2 gap-6">
             <NuxtImg src="/img/header1.webp" alt="Daniel Stoiński - magazyn" class="w-full object-cover border border-black" />
             <NuxtImg src="/img/header2.webp" alt="Daniel Stoiński - magazyn" class="w-full object-cover border border-black" />
-            <!-- <NuxtImg src="https://pub-5be065d2652c42c9a2d1b8d19ca5dbaf.r2.dev/magazyn/magazyn47.webp" alt="Daniel Stoiński - magazyn" class="w-full h-72 object-cover border border-black" />
-            <NuxtImg src="https://pub-5be065d2652c42c9a2d1b8d19ca5dbaf.r2.dev/magazyn/magazyn42.webp" alt="Daniel Stoiński - magazyn" class="w-full h-72 object-cover border border-black" /> -->
         </div>
         <div class="col-span-2 md:col-span-1 flex flex-col justify-between gap-6">
             <div> 

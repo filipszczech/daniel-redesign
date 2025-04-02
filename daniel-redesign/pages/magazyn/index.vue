@@ -11,7 +11,9 @@
                     <AsyncFurnitureComponent />
                 </template>
                 <template #fallback>
-                    <p>Loading...</p>
+                    <div class="my-12 xl:my-20">
+                        <Loader />
+                    </div>
                 </template>
             </Suspense>
             <Suspense>
@@ -19,7 +21,7 @@
                     <AsyncStorageComponent @openModal="handleOpenModal" />
                 </template>
                 <template #fallback>
-                    <p>Loading...</p>
+                    <Loader />
                 </template>
             </Suspense>
         </PageContent>

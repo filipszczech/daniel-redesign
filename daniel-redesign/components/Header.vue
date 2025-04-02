@@ -2,7 +2,7 @@
     <div>
         <header>
             <nav class="w-full z-50 bg-white">
-                <div class="fixed top-0 z-50 bg-white w-full grid grid-cols-6 items-center py-4 lg:py-6 px-6 lg:px-12 lg:text-lg transition-transform duration-300"
+                <div class="fixed top-0 z-50 bg-white w-full grid grid-cols-6 items-center py-4 lg:py-7 px-6 lg:px-12 lg:text-lg transition-transform duration-300"
                     :class="{ '-translate-y-full': !isVisible }">
                     <ul class="navbar-links hidden lg:flex justify-center col-span-2 gap-9 xl:gap-10">
                         <li>

@@ -12,7 +12,9 @@
                             <AsyncWorkshopDatesComponent />
                         </template>
                         <template #fallback>
-                            <p>Loading...</p>
+                            <div class="w-full p-12 col-span-12 md:col-span-5 h-full flex flex-col justify-center items-center">
+                                <Loader />
+                            </div>
                         </template>
                     </Suspense>
                 </div>
@@ -21,7 +23,9 @@
                         <AsyncWorkshopsComponent />
                     </template>
                     <template #fallback>
-                        <p>Loading...</p>
+                            <div class="my-12 xl:my-20">
+                                <Loader />
+                            </div>
                     </template>
                 </Suspense>
             </section>
@@ -48,17 +52,17 @@
     const events = ref([]);
 
     onMounted(async () => {
-    const { data, error } = await supabase
-        .from('Warsztaty archiwalne')
-        .select('*')
-        .order('order', { ascending: true, nullsFirst: false });
+        const { data, error } = await supabase
+            .from('Warsztaty archiwalne')
+            .select('*')
+            .order('order', { ascending: true, nullsFirst: false });
 
-    if (error) {
-        console.error('Błąd pobierania danych:', error.message);
-        return;
-    }
+        if (error) {
+            console.error('Błąd pobierania danych:', error.message);
+            return;
+        }
 
-    events.value = data;
+        events.value = data;
     });
 
     useHead({

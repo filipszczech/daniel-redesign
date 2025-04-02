@@ -13,12 +13,12 @@
                 <p>Krótkie streszczenie wpisu. Ciąg dalszy w środku...</p>
             </div>
             <div>
-                <img src="/img/blog2.jpg" class="w-full h-[32rem] object-cover bg-white mb-3 border border-black" />
+                <img src="/img/blog1.jpg" class="w-full h-[32rem] object-cover bg-white mb-3 border border-black" />
                 <h2 class="text-2xl text-[#003450] font-semibold">Tytuł wpisu</h2>
                 <p>Krótkie streszczenie wpisu. Ciąg dalszy w środku...</p>
             </div>
             <div>
-                <img src="/img/blog3.jpg" class="w-full h-[32rem] object-cover bg-white mb-3 border border-black" />
+                <img src="/img/blog1.jpg" class="w-full h-[32rem] object-cover bg-white mb-3 border border-black" />
                 <h2 class="text-2xl text-[#003450] font-semibold">Tytuł wpisu</h2>
                 <p>Krótkie streszczenie wpisu. Ciąg dalszy w środku...</p>
             </div>
