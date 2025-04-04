@@ -40,6 +40,7 @@
                 </div>
             </section>
         </PageContent>
+        <Toast v-for="toast in toasts" :key="toast.id" :message="toast.message" :duration="toast.duration" />
     </div>
 </template>
 
@@ -55,4 +56,5 @@
             lang: 'pl'
         },
     });
+    const { toasts } = useToast();
 </script>

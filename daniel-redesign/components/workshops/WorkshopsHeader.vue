@@ -4,16 +4,21 @@
             <div>
                 <h2 class="text-4xl md:text-5xl text-[#731919] font-semibold mb-6">Warsztaty</h2>
                 <div class="col-span-2 lg:col-span-1 grid md:hidden grid-cols-2 gap-5 mb-5">
-                    <NuxtImg src="https://media.filipszczech-dev.pl/warsztaty_fotele.webp" alt="Daniel Stoiński - magazyn" class="w-full h-64 object-cover border border-black" />
-                    <NuxtImg src="https://media.filipszczech-dev.pl/warsztaty_krzesla.webp" alt="Daniel Stoiński - magazyn" class="w-full h-64 object-cover border border-black" />
-                    <NuxtImg src="https://media.filipszczech-dev.pl/realizacje/pracownia39.webp" alt="Daniel Stoiński - magazyn" class="w-full h-64 object-cover border border-black" />
-                    <NuxtImg src="https://media.filipszczech-dev.pl/warsztaty_szafka.webp" alt="Daniel Stoiński - magazyn" class="w-full h-64 object-cover border border-black" />
+                    <NuxtImg src="https://media.filipszczech-dev.pl/warsztaty_fotele.webp" alt="Daniel Stoiński - magazyn" class="w-full h-64 object-cover" />
+                    <NuxtImg src="https://media.filipszczech-dev.pl/warsztaty_krzesla.webp" alt="Daniel Stoiński - magazyn" class="w-full h-64 object-cover" />
+                    <NuxtImg src="https://media.filipszczech-dev.pl/realizacje/pracownia39.webp" alt="Daniel Stoiński - magazyn" class="w-full h-64 object-cover" />
+                    <NuxtImg src="https://media.filipszczech-dev.pl/warsztaty_szafka.webp" alt="Daniel Stoiński - magazyn" class="w-full h-64 object-cover" />
                 </div>
                 <h3 class="text-lg mb-6 xl:pr-16">Zapraszam na kameralne warsztaty z podstaw renowacji mebli i tapicerowania. Małe grupy sprzyjają maksymalnemu skupieniu i uwadze na obiekcie oraz przekazywanej wiedzy. Porozmawiamy o narzędziach, materiałach i technologii wykonania mebli zgodnie ze sztuką tradycyjnego rzemiosła. Wsród oferty warsztatowej każdy znajdzie coś dla siebie, warsztaty podzielone są na sekcje: krzesło, fotel, stolik/szafka, wyplot rattanem czy warsztaty poświęcone kolekcjonowaniu mebli.</h3>
-                <p class="text-lg font-semibold">Nadchodzące terminy:</p>
-                <ul v-if="workshop_dates.length > 0" class="list-disc list-inside mt-3 text-lg">
-                    <li v-for="ws_date in workshop_dates" :key="ws_date.id" class="mb-2 lowercase">
-                        <a :href="ws_date.link" target="_blank" rel="noopener" :aria-label="'termin warsztatu ' + ws_date.name" class="border-b border-[#003450] text-[#003450]">{{ formatDate(ws_date.date, ws_date.date_end) }}</a> - {{ ws_date.name }}
+                <p class="text-lg font-semibold mb-2">Nadchodzące terminy:</p>
+                <ul v-if="workshopsWithDates.length > 0" class="list-inside text-base lg:text-lg pb-4 lg:max-h-72 overflow-y-auto custom-scroll lg:pr-16">
+                    <li v-for="ws in workshopsWithDates" :key="ws.id" class="mb-2">
+                        <span class="w-fit">{{ ws.name }}:</span><br>
+                        <span v-for="(ws_date, index) in workshopDatesByWorkshop(ws.id)" :key="ws_date.id" class="mr-2">
+                            <a :href="ws_date.link" target="_blank" rel="noopener" :aria-label="'termin warsztatu ' + ws_date.name" class="inline-block whitespace-nowrap cursor-pointer hover:underline">
+                                {{ formatDate(ws_date.date, ws_date.date_end) }}<span v-if="index !== workshopDatesByWorkshop(ws.id).length - 1">,</span> 
+                            </a>
+                        </span>
                     </li>
                 </ul>
                 <div v-else>
@@ -26,25 +31,11 @@
                 </NuxtLink>
             </div>
         </div>
-        <!-- <div class="hidden md:grid col-span-2 md:col-span-1 grid-cols-2 gap-6">
-            <div class="relative h-[16rem]">
-                <div class="w-full h-full bg-[#003450]"></div>
-            </div>
-            <div class="relative h-[16rem]">
-                <div class="w-full h-full bg-[#003450]"></div>
-            </div>
-            <div class="relative h-[16rem]">
-                <div class="w-full h-full bg-[#003450]"></div>
-            </div>
-            <div class="relative h-[16rem]">
-                <div class="w-full h-full bg-[#003450]"></div>
-            </div>
-        </div> -->
         <div class="col-span-2 md:col-span-1 hidden md:grid grid-cols-2 gap-6">
-            <NuxtImg src="https://media.filipszczech-dev.pl/warsztaty_fotele.webp" alt="Daniel Stoiński - magazyn" class="w-full h-80 object-cover border border-black" />
-            <NuxtImg src="https://media.filipszczech-dev.pl/warsztaty_krzesla.webp" alt="Daniel Stoiński - magazyn" class="w-full h-80 object-cover border border-black" />
-            <NuxtImg src="https://media.filipszczech-dev.pl/realizacje/pracownia39.webp" alt="Daniel Stoiński - magazyn" class="w-full h-80 object-cover border border-black" />
-            <NuxtImg src="https://media.filipszczech-dev.pl/warsztaty_szafka.webp" alt="Daniel Stoiński - magazyn" class="w-full h-80 object-cover border border-black" />
+            <NuxtImg src="https://media.filipszczech-dev.pl/warsztaty_fotele.webp" alt="Daniel Stoiński - magazyn" class="w-full h-80 object-cover" />
+            <NuxtImg src="https://media.filipszczech-dev.pl/warsztaty_krzesla.webp" alt="Daniel Stoiński - magazyn" class="w-full h-80 object-cover" />
+            <NuxtImg src="https://media.filipszczech-dev.pl/realizacje/pracownia39.webp" alt="Daniel Stoiński - magazyn" class="w-full h-80 object-cover" />
+            <NuxtImg src="https://media.filipszczech-dev.pl/warsztaty_szafka.webp" alt="Daniel Stoiński - magazyn" class="w-full h-80 object-cover" />
         </div>
     </div>
 </template>
@@ -55,10 +46,23 @@
     });
 
     const workshopsStore = useWorkshopsStore();
-    const workshop_dates = ref([]);
+    const workshopDates = ref([]);
+    const workshops = ref([]);
+    await workshopsStore.fetchWorkshopDates();
+    await workshopsStore.fetchWorkshops();
+    workshopDates.value = workshopsStore.dates;
+    workshops.value = workshopsStore.workshops;
+
+    const workshopsWithDates = computed(() =>
+        workshops.value.filter(ws => workshopDatesByWorkshop(ws.id).length > 0)
+    );
+
+    const workshopDatesByWorkshop = (workshopId) => {
+        return workshopDates.value.filter(date => date.workshop_id === workshopId);
+    };
 
     await workshopsStore.fetchWorkshopDates();
-    workshop_dates.value = workshopsStore.dates.sort((a, b) => new Date(a) - new Date(b));
+    workshopDates.value = workshopsStore.dates.sort((a, b) => new Date(a) - new Date(b));
 
     const formatDate = (start, end) => {
         const startDate = new Date(start);

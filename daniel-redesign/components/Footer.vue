@@ -8,11 +8,11 @@
                     </NuxtLink>
                 </div>
                 <ul class="navbar-links flex flex-wrap justify-center gap-5 md:gap-9 mb-9 mx-auto">
-                    <li>
+                    <!-- <li>
                         <NuxtLink to="/magazyn" class="pb-1">
                             sklep
                         </NuxtLink>
-                    </li>
+                    </li> -->
                     <li>
                         <NuxtLink to="/warsztaty" class="pb-1">
                             warsztaty
@@ -36,6 +36,16 @@
                     <li>
                         <NuxtLink to="/kontakt" class="pb-1">
                             kontakt
+                        </NuxtLink>
+                    </li>
+                    <li class="pb-1">
+                        <NuxtLink to="/realizacje">
+                            <p>realizacje</p>
+                        </NuxtLink>
+                    </li>
+                    <li class="pb-1">
+                        <NuxtLink to="/sesje">
+                            <p>sesje</p>
                         </NuxtLink>
                     </li>
                 </ul>

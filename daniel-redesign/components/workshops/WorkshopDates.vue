@@ -1,16 +1,19 @@
 <template>
-    <div class="col-span-12 md:col-span-5 flex flex-col lg:justify-between p-4 lg:p-6">
+    <div class="col-span-12 md:col-span-5 flex flex-col lg:justify-between p-4 lg:p-5">
         <div>
             <h2 class="text-3xl lg:text-4xl mb-4 text-[#731919]">Nadchodzące warsztaty:</h2>
-            <ul v-if="workshopDates.length > 0" class="list-inside text-base lg:text-lg pb-4 lg:max-h-48 xl:max-h-64 overflow-y-auto custom-scroll">
-                <li v-for="ws_date in workshopDates" :key="ws_date.id" class="mb-4">
-                    <span class="w-fit">> {{ ws_date.name }}</span><br>
-                    <span class="mt-2">Data wydarzenia: <a :href="ws_date.link" target="_blank" rel="noopener" :aria-label="'termin warsztatu ' + ws_date.name" class="border-b border-black">{{ formatDate(ws_date.date, ws_date.date_end) }}</a></span>
+            <ul v-if="workshopsWithDates.length > 0" class="list-inside text-base lg:text-lg pb-4 lg:max-h-96 overflow-y-auto custom-scroll">
+                <li v-for="ws in workshopsWithDates" :key="ws.id" class="mb-3">
+                    <p class="">> {{ ws.name }}:</p>
+                    <div class="">
+                        <span v-for="(ws_date, index) in workshopDatesByWorkshop(ws.id)" :key="ws_date.id" class="mr-2">
+                            <a :href="ws_date.link" target="_blank" rel="noopener" :aria-label="'termin warsztatu ' + ws_date.name" class="inline-block whitespace-nowrap cursor-pointer hover:underline">
+                                {{ formatDate(ws_date.date, ws_date.date_end) }}<span v-if="index !== workshopDatesByWorkshop(ws.id).length - 1">,</span> 
+                            </a>
+                        </span>
+                    </div>
                 </li>
             </ul>
-            <div v-else class="text-base lg:text-lg">
-                <p class="mb-2">Brak zaplanowanych warsztatów w najbliższym czasie.</p>
-            </div>
         </div>
         <div class="lg:text-end">
             <!-- <p class="text-lg lg:mb-4">Zaobserwuj <a class="border-b border-black">Facebooka</a>, aby być na bieżąco.</p> -->
@@ -24,8 +27,19 @@
 <script setup>
     const workshopsStore = useWorkshopsStore();
     const workshopDates = ref([]);
+    const workshops = ref([]);
     await workshopsStore.fetchWorkshopDates();
+    await workshopsStore.fetchWorkshops();
     workshopDates.value = workshopsStore.dates;
+    workshops.value = workshopsStore.workshops;
+
+    const workshopsWithDates = computed(() =>
+        workshops.value.filter(ws => workshopDatesByWorkshop(ws.id).length > 0)
+    );
+
+    const workshopDatesByWorkshop = (workshopId) => {
+        return workshopDates.value.filter(date => date.workshop_id === workshopId);
+    };
 
     const formatDate = (start, end) => {
         const startDate = new Date(start);

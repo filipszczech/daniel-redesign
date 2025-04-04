@@ -19,6 +19,7 @@
     "@nuxtjs/supabase": "^1.4.1",
     "@pinia/nuxt": "^0.5.5",
     "@vueuse/motion": "^2.2.6",
+    "formidable": "^3.5.2",
     "nuxt": "^3.13.0",
     "nuxt-mail": "^5.1.1",
     "pinia": "^2.2.4",

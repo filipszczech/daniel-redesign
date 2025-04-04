@@ -1,7 +1,7 @@
 <template>
     <div class="">
         <section>
-            <div class=" relative text-white mt-24"
+            <div class=" relative text-white mt-16 lg:mt-24"
                 >
                 <NuxtImg src="/img/test_tlo2.png" alt="zdjęcie głównego baneru strony przedstawiające warsztat" class="w-full opacity-90" />                
                 <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xl md:text-3xl text-center flex flex-col justify-center items-center">

@@ -21,7 +21,7 @@
             </div>
             <div class="col-span-2 md:col-span-1 flex items-center"
                 :class="index % 2 ? 'justify-end' : 'justify-start'">
-                <NuxtImg :src="workshop.img" :alt="'zdjęcie z warsztatu: ' + workshop.name" class="w-full xl:w-4/5 md:h-96 lg:h-[36rem] object-cover bg-white border border-black" />
+                <NuxtImg :src="workshop.img" :alt="'zdjęcie z warsztatu: ' + workshop.name" class="w-full xl:w-4/5 md:h-96 lg:h-[36rem] object-cover bg-white" />
             </div>
         </div>
     </div>
