@@ -5,15 +5,15 @@
                 <div>
                     <h2 class="text-4xl md:text-5xl text-[#731919] font-semibold mb-6">Warsztaty</h2>
                     <div class="col-span-2 lg:col-span-1 grid md:hidden grid-cols-2 gap-5 mb-5">
-                        <NuxtImg src="https://media.filipszczech-dev.pl/warsztaty_fotele.webp" alt="Daniel Stoiński - magazyn" class="w-full h-64 object-cover" />
-                        <NuxtImg src="https://media.filipszczech-dev.pl/warsztaty_krzesla.webp" alt="Daniel Stoiński - magazyn" class="w-full h-64 object-cover" />
-                        <NuxtImg src="https://media.filipszczech-dev.pl/realizacje/pracownia39.webp" alt="Daniel Stoiński - magazyn" class="w-full h-64 object-cover" />
-                        <NuxtImg src="https://media.filipszczech-dev.pl/warsztaty_szafka.webp" alt="Daniel Stoiński - magazyn" class="w-full h-64 object-cover" />
+                        <NuxtImg src="https://media.filipszczech-dev.pl/warsztaty_fotele.webp" alt="Daniel Stoiński - magazyn" class="w-full h-52 object-cover" />
+                        <NuxtImg src="https://media.filipszczech-dev.pl/warsztaty_krzesla.webp" alt="Daniel Stoiński - magazyn" class="w-full h-52 object-cover" />
+                        <NuxtImg src="https://media.filipszczech-dev.pl/realizacje/pracownia39.webp" alt="Daniel Stoiński - magazyn" class="w-full h-52 object-cover" />
+                        <NuxtImg src="https://media.filipszczech-dev.pl/warsztaty_szafka.webp" alt="Daniel Stoiński - magazyn" class="w-full h-52 object-cover" />
                     </div>
-                    <h3 class="text-lg mb-6 xl:pr-16">Zapraszam na kameralne warsztaty z podstaw renowacji mebli i tapicerowania. Małe grupy sprzyjają maksymalnemu skupieniu i uwadze na obiekcie oraz przekazywanej wiedzy. Porozmawiamy o narzędziach, materiałach i technologii wykonania mebli zgodnie ze sztuką tradycyjnego rzemiosła. Wsród oferty warsztatowej każdy znajdzie coś dla siebie, warsztaty podzielone są na sekcje: krzesło, fotel, stolik/szafka, wyplot rattanem czy warsztaty poświęcone kolekcjonowaniu mebli.</h3>
+                    <h3 class="text-base md:text-lg mb-6 xl:pr-16">Zapraszam na kameralne warsztaty z podstaw renowacji mebli i tapicerowania. Małe grupy sprzyjają maksymalnemu skupieniu i uwadze na obiekcie oraz przekazywanej wiedzy. Porozmawiamy o narzędziach, materiałach i technologii wykonania mebli zgodnie ze sztuką tradycyjnego rzemiosła. Wsród oferty warsztatowej każdy znajdzie coś dla siebie, warsztaty podzielone są na sekcje: krzesło, fotel, stolik/szafka, wyplot rattanem czy warsztaty poświęcone kolekcjonowaniu mebli.</h3>
                 </div>
                 <p class="text-lg font-semibold mb-3">Rodzaje warsztatów:</p>
-                <div class="flex gap-3 flex-wrap text-base md:text-lg">
+                <div class="flex gap-3 flex-wrap text-sm md:text-lg">
                     <div @click="scrollToWorkshop(w.id)" v-for="w in workshops" :key="w.id" class="border border-black px-3 py-1 cursor-pointer hover:bg-[#003450] hover:bg-opacity-90 hover:text-white transition-all duration-300">
                         <p>{{ w.name }}</p>
                     </div>
@@ -28,11 +28,11 @@
         </div>
         <div class="grid grid-cols-12 gap-6 xl:gap-12">
             <div class="col-span-12 flex flex-col gap-1">
-                <h2 class="text-2xl md:text-4xl font-semibold mb-3 md:mb-5">Terminy warsztatów:</h2>
+                <h2 class="text-lg md:text-4xl font-semibold mb-2 md:mb-5">Terminy warsztatów:</h2>
                 <div v-for="ws in workshopDates" :key="ws.id" class="group flex gap-6 xl:gap-12 justify-between items-center w-full py-3 border-b border-gray-400 md:hover:translate-x-2 transition-all duration-500 ease-in-out">
-                    <div class="flex gap-4 md:gap-6 xl:gap-12 items-center">
+                    <div class="flex gap-2 md:gap-6 xl:gap-12 items-center">
                         <div class="flex flex-col gap-1">
-                            <div class="flex flex-col justify-between w-12 md:w-20 text-[#003450] group-hover:text-[#731919] transition-all duration-500 ease-in-out">
+                            <div class="flex flex-col justify-between w-16 md:w-20 text-[#003450] group-hover:text-[#731919] transition-all duration-500 ease-in-out">
                                 <!-- <p>{{ getWeekdays(ws.date, ws.date_end)}}</p> -->
                                 <p class="text-sm md:text-xl">{{ getMonths(ws.date, ws.date_end) }}</p>
                                 <div class="text-lg md:text-3xl font-semibold">{{  getDays(ws.date, ws.date_end) }}</div>
@@ -42,16 +42,19 @@
                             <p class="text-sm md:text-lg">{{ getWeekdays(ws.date, ws.date_end)}}</p>
                         </div>
                         <div class="">
-                            <p class="font-semibold text-base md:text-2xl md:text-end">{{ ws.name }}</p>
+                            <p class="font-semibold text-sm md:text-2xl md:text-end">{{ ws.name }}</p>
                         </div>
                     </div>
                     <div class="flex gap-6 items-center">
                         <!-- <p class="text-[#003450] font-semibold">dostępne miejsca</p> -->
-                        <a v-if="ws.link" :href="ws.link" target="_blank" rel="noopener" aria-label="Link do wydarzenia" class="border border-black px-3 py-1 text-sm md:text-lg cursor-pointer hover:bg-[#003450] hover:bg-opacity-90 hover:text-white transition-all duration-300">wydarzenie</a>
-                        <a v-else class="border border-black px-3 py-1 text-sm md:text-lg">wydarzenie</a>
+                        <a v-if="ws.link" :href="ws.link" target="_blank" rel="noopener" aria-label="Link do wydarzenia" class="border border-black px-2 md:px-3 py-1 text-sm md:text-lg cursor-pointer hover:bg-[#003450] hover:bg-opacity-90 hover:text-white transition-all duration-300">wydarzenie</a>
+                        <a v-else class="border border-black px-2 md:px-3 py-1 text-sm md:text-lg">wydarzenie</a>
                     </div>
                 </div>
-                <p class="text-base lg:text-lg mt-4 text-center">
+                <p class="md:hidden text-center mt-4 text-base">
+                    Zapisy na adres:<br><span class="border-b border-black ml-2">halo@danielstoinskiredesign.pl</span>
+                </p>
+                <p class="hidden md:block text-base lg:text-lg mt-4 text-center">
                     Zapisy na adres:<span class="border-b border-black ml-2">halo@danielstoinskiredesign.pl</span>
                 </p>
             </div>
@@ -67,14 +70,6 @@
     await workshopsStore.fetchWorkshops();
     workshopDates.value = workshopsStore.dates;
     workshops.value = workshopsStore.workshops;
-
-    const workshopsWithDates = computed(() =>
-        workshops.value.filter(ws => workshopDatesByWorkshop(ws.id).length > 0)
-    );
-
-    const workshopDatesByWorkshop = (workshopId) => {
-        return workshopDates.value.filter(date => date.workshop_id === workshopId);
-    };
 
     const getWeekdays = (start, end) => {
         const startDate = new Date(start);

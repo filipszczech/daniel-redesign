@@ -80,11 +80,11 @@
                                 <p>strona główna</p>
                             </NuxtLink>
                         </li>
-                        <li class="uppercase" v-motion :initial="{ opacity: 0, scale: 0.7, x: -100,}" :enter="{opacity: 1, scale: 1, x: 0,}" :duration="500" :delay="100">
+                        <!-- <li class="uppercase" v-motion :initial="{ opacity: 0, scale: 0.7, x: -100,}" :enter="{opacity: 1, scale: 1, x: 0,}" :duration="500" :delay="100">
                             <NuxtLink to="/"  @click="toggleMenu">
                                 <p>sklep</p>
                             </NuxtLink>
-                        </li>
+                        </li> -->
                         <li class="uppercase" v-motion :initial="{ opacity: 0, scale: 0.7, x: -100,}" :enter="{opacity: 1, scale: 1, x: 0,}" :duration="500" :delay="200">
                             <NuxtLink to="/warsztaty"  @click="toggleMenu">
                                 <p>warsztaty</p>

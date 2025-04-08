@@ -4,37 +4,36 @@
             <div>
                 <h2 class="text-4xl md:text-5xl text-[#731919] font-semibold mb-6">Warsztaty</h2>
                 <div class="col-span-2 lg:col-span-1 grid md:hidden grid-cols-2 gap-5 mb-5">
-                    <NuxtImg src="https://media.filipszczech-dev.pl/warsztaty_fotele.webp" alt="Daniel Stoiński - magazyn" class="w-full h-64 object-cover" />
-                    <NuxtImg src="https://media.filipszczech-dev.pl/warsztaty_krzesla.webp" alt="Daniel Stoiński - magazyn" class="w-full h-64 object-cover" />
-                    <NuxtImg src="https://media.filipszczech-dev.pl/realizacje/pracownia39.webp" alt="Daniel Stoiński - magazyn" class="w-full h-64 object-cover" />
-                    <NuxtImg src="https://media.filipszczech-dev.pl/warsztaty_szafka.webp" alt="Daniel Stoiński - magazyn" class="w-full h-64 object-cover" />
+                    <NuxtImg src="https://media.filipszczech-dev.pl/warsztaty_fotele.webp" alt="Daniel Stoiński - magazyn" class="w-full h-52 object-cover" />
+                    <NuxtImg src="https://media.filipszczech-dev.pl/warsztaty_krzesla.webp" alt="Daniel Stoiński - magazyn" class="w-full h-52 object-cover" />
+                    <NuxtImg src="https://media.filipszczech-dev.pl/realizacje/pracownia39.webp" alt="Daniel Stoiński - magazyn" class="w-full h-52 object-cover" />
+                    <NuxtImg src="https://media.filipszczech-dev.pl/warsztaty_szafka.webp" alt="Daniel Stoiński - magazyn" class="w-full h-52 object-cover" />
                 </div>
-                <h3 class="text-lg mb-6 xl:pr-10">Zapraszam na kameralne warsztaty z podstaw renowacji mebli i tapicerowania. Małe grupy sprzyjają maksymalnemu skupieniu i uwadze na obiekcie oraz przekazywanej wiedzy. Porozmawiamy o narzędziach, materiałach i technologii wykonania mebli zgodnie ze sztuką tradycyjnego rzemiosła. Wsród oferty warsztatowej każdy znajdzie coś dla siebie, warsztaty podzielone są na sekcje: krzesło, fotel, stolik/szafka, wyplot rattanem czy warsztaty poświęcone kolekcjonowaniu mebli.</h3>
-                <p class="text-lg font-semibold mb-3">Rodzaje warsztatów:</p>
+                <h3 class="text-base md:text-lg mb-6 xl:pr-10">Zapraszam na kameralne warsztaty z podstaw renowacji mebli i tapicerowania. Małe grupy sprzyjają maksymalnemu skupieniu i uwadze na obiekcie oraz przekazywanej wiedzy. Porozmawiamy o narzędziach, materiałach i technologii wykonania mebli zgodnie ze sztuką tradycyjnego rzemiosła. Wsród oferty warsztatowej każdy znajdzie coś dla siebie, warsztaty podzielone są na sekcje: krzesło, fotel, stolik/szafka, wyplot rattanem czy warsztaty poświęcone kolekcjonowaniu mebli.</h3>
+                <p class="text-base md:text-lg font-semibold mb-3">Rodzaje warsztatów:</p>
                 <div class="flex gap-3 flex-wrap text-lg mb-6">
-                    <div v-for="w in workshops" :key="w.id" class="border border-black px-3 py-1">
-                        <p>{{ w.name }}</p>
+                    <div v-for="w in workshops" :key="w.id" class="border border-black hover:bg-[#003450] hover:bg-opacity-90 hover:text-white transition-all duration-300">
+                        <NuxtLink :to="'/warsztaty' + '#workshop_' + w.id">
+                            <p class="px-3 py-1">{{ w.name }}</p>
+                        </NuxtLink>
                     </div>
                 </div>
-                <!-- <ul v-if="workshopsWithDates.length > 0" class="list-inside text-base lg:text-lg pb-4 lg:max-h-72 overflow-y-auto custom-scroll lg:pr-16">
-                    <li v-for="ws in workshopsWithDates" :key="ws.id" class="mb-2">
-                        <span class="w-fit">{{ ws.name }}:</span><br>
-                        <span v-for="(ws_date, index) in workshopDatesByWorkshop(ws.id)" :key="ws_date.id" class="mr-2">
-                            <a :href="ws_date.link" target="_blank" rel="noopener" :aria-label="'termin warsztatu ' + ws_date.name" class="inline-block whitespace-nowrap cursor-pointer hover:underline">
-                                {{ formatDate(ws_date.date, ws_date.date_end) }}<span v-if="index !== workshopDatesByWorkshop(ws.id).length - 1">,</span> 
-                            </a>
-                        </span>
-                    </li>
-                </ul> -->
-                <ul v-if="workshopDates.length > 0" class="list-inside text-base lg:text-lg pb-4 lg:max-h-72 overflow-y-auto custom-scroll lg:pr-16">
+                <ul v-if="workshopDates.length > 0" class="list-inside text-base md:text-lg pb-4 lg:max-h-72 overflow-y-auto custom-scroll lg:pr-16">
                     <p class="text-lg font-semibold mb-2">Najbliższe terminy:</p>
                     <li v-for="ws in workshopDates.slice(0, 2)" :key="ws.id" class="mb-2">
-                        <p class="w-fit">> {{ ws.name }}: <u>{{ formatDate(ws.date, ws.date_end) }}</u></p>
+                        <p class="w-fit">> {{ ws.name }}: 
+                            <span v-if="ws.link">
+                                <a :href="ws.link" class="cursor-pointer" target="_blank" rel="noopener" aria-label="Link do wydarzenia"><u>{{ formatDate(ws.date, ws.date_end) }}</u></a>
+                            </span>
+                            <span v-else>
+                                <u>{{ formatDate(ws.date, ws.date_end) }}</u>
+                            </span>
+                        </p>
                     </li>
                 </ul>
-                <!-- <div v-else>
-                    <p class="mb-2">Brak zaplanowanych warsztatów w najbliższym czasie.</p>
-                </div> -->
+                <div v-else>
+                    <p class="mb-2 text-base md:text-lg">Brak zaplanowanych warsztatów w najbliższym czasie.</p>
+                </div>
             </div>
             <div class="flex justify-end md:justify-start mt-1">
                 <NuxtLink v-if="homepage" to="/warsztaty" class=" font-semibold py-1 w-fit border-b border-[#003450] text-[#003450]">
