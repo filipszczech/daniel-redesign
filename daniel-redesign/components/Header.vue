@@ -1,8 +1,8 @@
 <template>
     <div>
         <header>
-            <nav class="w-full z-50 bg-white">
-                <div class="fixed top-0 z-50 bg-white w-full grid grid-cols-6 items-center py-4 lg:py-7 px-6 lg:px-12 lg:text-lg transition-transform duration-300"
+            <nav class="w-full z-50 bg-[#f8f5f0]">
+                <div class="fixed top-0 z-50 bg-[#f8f5f0] w-full grid grid-cols-6 items-center py-4 lg:py-7 px-6 lg:px-12 lg:text-lg transition-transform duration-300"
                     :class="{ '-translate-y-full': !isVisible }">
                     <ul class="navbar-links hidden lg:flex justify-center col-span-2 gap-9 xl:gap-10">
                         <!-- <li>
@@ -30,12 +30,12 @@
                     </div>
                     <!-- Navigation links for larger screens -->
                     <ul class="navbar-links hidden lg:flex col-span-2 justify-center gap-9 xl:gap-10">
-                        <li @mouseover="isPortfolioOpen = true" @mouseleave="isPortfolioOpen = false" class="group bg-white relative pb-1">
+                        <li @mouseover="isPortfolioOpen = true" @mouseleave="isPortfolioOpen = false" class="group bg-[#f8f5f0] relative pb-1">
                             <div class="flex gap-2 items-center">
                                 <p>portfolio</p>
                                 <Icon class="transition-all duration-300 group-hover:rotate-180" size="1.1rem" name="gridicons:chevron-down" />
                             </div>
-                            <ul v-if="isPortfolioOpen" class="navbar-links absolute bg-white bg-opacity-65 top-full py-2 w-full px-1"
+                            <ul v-if="isPortfolioOpen" class="navbar-links absolute bg-[#f8f5f0] bg-opacity-65 top-full py-2 w-full px-1"
                                 v-motion
                                 :initial="{ opacity: 0, y: -30 }"
                                 :enter="{ opacity: 1, y: 0 }"
@@ -71,7 +71,7 @@
                     </ul>
                 </div>
                 <transition name="slide-down">
-                    <ul v-if="isMenuOpen" class="fixed lg:hidden top-0 left-0 z-50 bg-white w-screen h-screen max-h-screen navbar-links flex flex-col justify-center pl-12 sm:pl-20 text-2xl gap-4 pb-2 pr-4 sm:pr-6">    
+                    <ul v-if="isMenuOpen" class="fixed lg:hidden top-0 left-0 z-50 bg-[#f8f5f0] w-screen h-screen max-h-screen navbar-links flex flex-col justify-center pl-12 sm:pl-20 text-2xl gap-4 pb-2 pr-4 sm:pr-6">    
                         <button @click="toggleMenu" class="absolute top-12 right-12">
                             <Icon name="ci:close-big" size="2.5rem" />
                         </button>

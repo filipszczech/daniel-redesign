@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="columns-1 sm:columns-2 md:columns-3 gap-5 mb-3 xl:mb-5 relative">
-            <div v-show="loaderActive && currentPage !== 1" class="absolute top-0 left-0 w-full h-full bg-white z-10 transition-all duration-500">
+            <div v-show="loaderActive && currentPage !== 1" class="absolute top-0 left-0 w-full h-full bg-[#f8f5f0] z-10 transition-all duration-500">
                 <div class="flex justify-center items-center w-full mt-12">
                     <Loader />
                 </div>

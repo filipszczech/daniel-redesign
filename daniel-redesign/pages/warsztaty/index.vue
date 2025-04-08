@@ -3,10 +3,7 @@
         <PageContent>
             <h1 class="w-[1px] h-[1px] overflow-hidden">Daniel Stoiński Redesign - informacje na temat warsztatów prowadzonych przeze mnie w mojej pracowni, jak również poza nią. Są to warsztaty dotyczące renowacji mebli oraz historii sztuki.</h1>
             <section class="mb-16 xl:mb-32">
-                <div class="grid grid-cols-12 gap-0 mb-24 md:mb-56 border border-black">
-                    <div class="w-full col-span-12 md:col-span-7">
-                        <img src="/img/warsztaty2.jpg" class="w-full h-full object-cover" />
-                    </div>
+                <div class="">
                     <Suspense>
                         <template #default>
                             <AsyncWorkshopDatesComponent />
@@ -33,7 +30,7 @@
                 <h2 class="text-4xl md:text-5xl text-[#731919] font-semibold mb-6">Minione wydarzenia:</h2>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
                     <div v-for="item in events" :key="item.id" class="">
-                        <NuxtImg :src="item.img" :alt="'zdjęcie minionego warsztatu'" class="w-full mb-4 bg-white border border-black" />
+                        <NuxtImg :src="item.img" :alt="'zdjęcie minionego warsztatu'" class="w-full mb-4 bg-[#f8f5f0] border border-black" />
                         <p v-if="item.name" class="font-semibold mb-3">{{ item.name }}</p>
                         <p class="mb-1 lg:mb-2 pr-16">{{ item.desc }}</p>
                         <a class="underline text-[#003450]" :href="item.link">{{ item.link }}</a>              
@@ -50,6 +47,7 @@
 
     const supabase = useSupabaseClient();
     const events = ref([]);
+    const test_img = ref(null);
 
     onMounted(async () => {
         const { data, error } = await supabase

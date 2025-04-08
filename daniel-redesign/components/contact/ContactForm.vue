@@ -12,7 +12,7 @@
                     <form
                         @submit="onSubmit" 
                         class='relative z-20 grid grid-cols-2 gap-6'>
-                        <div v-if="isSending" class="absolute top-0 left-0 w-full h-full flex justify-center items-center z-50 bg-white opacity-60">
+                        <div v-if="isSending" class="absolute top-0 left-0 w-full h-full flex justify-center items-center z-50 bg-[#f8f5f0] opacity-60">
                             <Loader />
                         </div>
                         <div class="col-span-2 md:col-span-1 relative bg-transparent">
@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="hidden lg:flex justify-end items-center">
-                <NuxtImg src="/img/kontakt.jpg" alt="Daniel Stoiński - kontakt" class="w-3/4 object-cover bg-white" />
+                <NuxtImg src="/img/kontakt.jpg" alt="Daniel Stoiński - kontakt" class="w-3/4 object-cover bg-[#f8f5f0]" />
             </div>
         </div>
     </div>

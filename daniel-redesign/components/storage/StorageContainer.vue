@@ -1,5 +1,5 @@
 <template>
-     <section class="grid grid-cols-12 gap-4 md:gap-8 bg-white">
+     <section class="grid grid-cols-12 gap-4 md:gap-8 bg-[#f8f5f0]">
         <h2 class="col-span-12 text-2xl sm:text-3xl">Obecny stan magazynu:</h2>
         <div class="col-span-6 md:col-span-4 lg:col-span-3"
             v-for="item in displayedStorage"

@@ -1,7 +1,7 @@
 <template>
     <div class="fixed top-0 lfet-0 w-full h-full bg-black bg-opacity-35 z-50 flex justify-center items-center  px-6"
         @click.self="closeModal">
-        <div class="max-w-xl mx-auto bg-white w-fit p-4 flex flex-col gap-4">
+        <div class="max-w-xl mx-auto bg-[#f8f5f0] w-fit p-4 flex flex-col gap-4">
             <div v-if="item.images" class="flex justify-center relative">
                 <img :src="item.images[currentImage]" alt="krzesła" class="h-[60vh] object-cover mx-auto" />
                 <div v-if="item.images.length > 1" @click="prevImage" class="absolute left-0 top-1/2 p-1 transform -translate-y-[50%] bg-transparent cursor-pointer">

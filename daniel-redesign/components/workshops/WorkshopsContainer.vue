@@ -1,9 +1,9 @@
 <template>
     <div>
-        <div v-for="(workshop, index) in workshops" :key="workshop.id" class="grid grid-cols-2 gap-6 lg:gap-16 mb-24 xl:mb-40">
-            <div class="col-span-2 md:col-span-1 flex flex-col justify-center gap-6"
+        <div v-for="(workshop, index) in workshops" :id="'workshop_' + workshop.id" :key="workshop.id" class="grid grid-cols-2 gap-6 lg:gap-16 pt-24 xl:pt-40">
+            <div class="col-span-2 md:col-span-1 flex flex-col justify-center gap-3 md:gap-6"
                 :class="index % 2 === 0 && 'lg:order-2'">
-                <h3 class="text-4xl md:text-5xl text-[#731919] font-semibold">{{ workshop.name }}</h3>
+                <h3 class="text-3xl md:text-5xl text-[#731919] font-semibold">{{ workshop.name }}</h3>
                 <div v-if="workshop.desc" class="xl:pr-16">
                     <p v-html="workshop.desc"></p>
                 </div>
@@ -21,7 +21,7 @@
             </div>
             <div class="col-span-2 md:col-span-1 flex items-center"
                 :class="index % 2 ? 'justify-end' : 'justify-start'">
-                <NuxtImg :src="workshop.img" :alt="'zdjęcie z warsztatu: ' + workshop.name" class="w-full xl:w-4/5 md:h-96 lg:h-[36rem] object-cover bg-white" />
+                <NuxtImg :src="workshop.img" :alt="'zdjęcie z warsztatu: ' + workshop.name" class="w-full xl:w-4/5 md:h-96 lg:h-[36rem] object-cover bg-[#f8f5f0]" />
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 <template>
     <div>
         <footer class="max-w-[86rem] px-4 sm:px-6 lg:px-8 mx-auto">
-            <div class="py-9 border-t border-[#003450] bg-white">
+            <div class="py-9 border-t border-[#003450] bg-[#f8f5f0]">
                 <div class="flex justify-center mb-6">
                     <NuxtLink to="/" class="mx-auto w-fit">
                         <NuxtImg src="/img/logo.png" alt="Daniel Stoiński Redesign logo" class="h-10 md:h-12" />

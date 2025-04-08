@@ -15,10 +15,10 @@
         </section>
         <PageContent>
             <h1 class="w-[1px] h-[1px] overflow-hidden">Daniel Stoiński Redesign - pracownia renowacji mebli i tradycyjnego rzemiosła, znajdująca się w Krakowie. Oferta pracowni obejmuje: renwoację mebli dostarczonych przez klienta, sprzedaż, warsztaty.</h1>
-            <!-- <section class="bg-white mb-24 xl:my-40">
+            <!-- <section class="bg-[#f8f5f0] mb-24 xl:my-40">
                 <EbookHeader :homepage="true" />
             </section> -->
-            <section class="bg-white mb-24 xl:mb-40">
+            <section class="bg-[#f8f5f0] mb-24 xl:mb-40">
                 <Suspense>
                     <template #default>
                         <AsyncWorkshopsHeader :homepage="true" />
@@ -30,16 +30,16 @@
                     </template>
                 </Suspense>
             </section>
-            <!-- <section class="bg-white mb-24 xl:mb-40">
+            <!-- <section class="bg-[#f8f5f0] mb-24 xl:mb-40">
                 <BlogHeader :homepage="true" />
             </section> -->
-            <section class="bg-white mb-24 xl:mb-40">
+            <section class="bg-[#f8f5f0] mb-24 xl:mb-40">
                 <StorageHeader :homepage="true" />
             </section>
-            <section class="bg-white mb-24 xl:mb-40">
+            <section class="bg-[#f8f5f0] mb-24 xl:mb-40">
                 <AboutHeader :homepage="true" />
             </section>
-            <section class="bg-white mb-12">
+            <section class="bg-[#f8f5f0] mb-12">
                 <ContactHeader />
             </section>
         </PageContent>

@@ -20,7 +20,7 @@
                 </button>
             </div>
             <div class="flex flex-col justify-center items-center h-[70vh] md:h-[80vh]">
-                <div class="p-3 bg-white">
+                <div class="p-3 bg-[#f8f5f0]">
                     <NuxtImg format="webp" placeholder :src="photo.src" :alt="'zdjęcie: ' + photo.name" class=" max-w-[85vw] h-auto md:h-[70vh] max-h-[60vh] md:max-h-[75vh] object-cover" />
                     <div v-if="photo.name" class="pt-3 text-center max-w-[21rem] mx-auto text-sm">
                         <p class="text-center">{{ photo.name }}</p>

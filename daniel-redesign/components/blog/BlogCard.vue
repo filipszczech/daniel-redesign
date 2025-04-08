@@ -1,7 +1,7 @@
 <template>
     <div>
         <NuxtLink :to="'/wpisy/' + post.slug">
-            <img :src="post.img" class="w-full h-[32rem] object-cover bg-white mb-3 border border-black" />
+            <img :src="post.img" class="w-full h-[32rem] object-cover bg-[#f8f5f0] mb-3 border border-black" />
         </NuxtLink>
         <h2 class="text-3xl md:text-4xl text-[#003450] font-semibold mb-3 mt-5">{{ post.title }}</h2>
         <p class="text-lg">{{ post.desc }}</p>

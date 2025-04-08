@@ -65,9 +65,9 @@ export default defineEventHandler(async (event) => {
         });
 
         const mailOptions = {
-            from: process.env.EMAIL_USER,
+            from: '1wiktoria.roman2@gmail.com',
             replyTo: email,
-            to: process.env.EMAIL_USER,
+            to: '1wiktoria.roman2@gmail.com',
             subject: subject || `Kontakt w sprawie mebli - ${name}`,
             text: `Wiadomość od: ${email}\n\n${message}`,
             attachments,

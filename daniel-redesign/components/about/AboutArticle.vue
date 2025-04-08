@@ -1,7 +1,7 @@
 <template>
     <div class="grid grid-cols-2 gap-6 md:gap-12">
         <h3 class="md:hidden col-span-2 text-3xl text-[#003450] font-semibold">{{ article.name }}</h3>
-        <NuxtImg :src="article.img" :alt="'zdjęcie z artykułu: ' + article.name" class="col-span-2 md:col-span-1 w-full h-auto md:h-[24rem] object-cover bg-white" />
+        <NuxtImg :src="article.img" :alt="'zdjęcie z artykułu: ' + article.name" class="col-span-2 md:col-span-1 w-full h-auto md:h-[24rem] object-cover bg-[#f8f5f0]" />
         <div class="col-span-2 md:col-span-1 flex flex-col justify-between h-full">
             <div>
                 <p class="hidden md:block text-3xl lg:text-4xl xl:text-5xl text-[#003450] font-semibold mb-4">{{ article.name }}</p>

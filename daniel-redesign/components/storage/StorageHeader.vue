@@ -1,5 +1,5 @@
 <template>
-    <div class="grid grid-cols-2 gap-6 lg:gap-12 bg-white">
+    <div class="grid grid-cols-2 gap-6 lg:gap-12 bg-[#f8f5f0]">
         <div class="col-span-2 md:col-span-1 hidden md:grid grid-cols-2 gap-6">
             <NuxtImg src="/img/header1.webp" alt="Daniel Stoiński - magazyn" class="w-full object-cover" />
             <NuxtImg src="/img/header2.webp" alt="Daniel Stoiński - magazyn" class="w-full object-cover" />

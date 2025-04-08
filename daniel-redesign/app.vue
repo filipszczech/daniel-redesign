@@ -49,7 +49,7 @@
   } */
    body {
     font-family: "PT Sans", serif;
-    /* background-color: #EDEDE2; */
+    background-color: #f8f5f0;
    }
 
 </style>

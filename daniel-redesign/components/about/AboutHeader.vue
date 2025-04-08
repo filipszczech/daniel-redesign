@@ -2,7 +2,7 @@
     <div class="grid grid-cols-2 gap-6 lg:gap-12 border-[#003450]">
         <div class="col-span-2 md:col-span-1 flex flex-col justify-center gap-4 md:gap-6">
             <h2 class="text-4xl md:text-5xl text-[#731919] font-semibold">Daniel Stoiński</h2>
-            <NuxtImg src="https://www.asp.krakow.pl/wp-content/uploads/2024/06/3.-Daniel-Stoinski.jpg" alt="Daniel Stoiński - zdjęcie profilowe" class="md:hidden col-span-2 w-full h-[28rem] object-cover bg-white" />
+            <NuxtImg src="https://www.asp.krakow.pl/wp-content/uploads/2024/06/3.-Daniel-Stoinski.jpg" alt="Daniel Stoiński - zdjęcie profilowe" class="md:hidden col-span-2 w-full h-[28rem] object-cover bg-[#f8f5f0]" />
             <h3>
                 Jestem kulturoznawcą i czeladnikiem tradycyjnego rzemiosła, właścicielem pracowni renowacji mebli Daniel Stoiński Redesign oraz sklepu z powojennym dizajnem Pikasy Sklep. Od 11 lat zajmuję się kompleksową renowacją mebli, prowadząc stolarsko-tapicerskie warsztaty i szkolenia. Mam również przyjemność być ekspertem w programie telewizyjnym „Łowcy Skarbów. Kto da więcej” w TV4. Prywatnie jestem kolekcjonerem powojennego wzornictwa oraz ojcem dwóch charcich adopciaków Abbie i Sake.   
             </h3>
@@ -19,7 +19,7 @@
                 </ul>
             </div> -->
         </div>
-        <img src="https://www.asp.krakow.pl/wp-content/uploads/2024/06/3.-Daniel-Stoinski.jpg" class="hidden md:block col-span-1 w-full h-[40rem] object-cover bg-white" />
+        <img src="https://www.asp.krakow.pl/wp-content/uploads/2024/06/3.-Daniel-Stoinski.jpg" class="hidden md:block col-span-1 w-full h-[40rem] object-cover bg-[#f8f5f0]" />
     </div>
 </template>
 
